@@ -12,7 +12,7 @@ To install OneSky for Web SDKs, first identify which installation type suits for
 ### Basic Javascript
 Basic Javascript suits for a statc web page (e.g. HTML file) or server-side rendering web site (e.g. PHP). To install OneSky for Web into your product, just include the source script from cdn by pasting code snippets inline of HTML code, for example
 
-```
+```javascript
 <script src="https://cdn.onesky.app/widget/363228f3-3780-46a4-95ce-383396418be7"></script>
 <script type="text/javascript">
     window.onesky = {
@@ -45,7 +45,7 @@ We allow saving end users' locale preferences. There are two types of users we c
 ### Anonymous user
 We save an anonymous user's locale preference using cookies. By default, you do not have to modify anything in the installation code snippet to achieve the save. Since anonymous users do not have any identities in your app, we will only handle their locale preferences in their devices locally, no preferences are saved in our side.
 
-```
+```javascript
 <script type="text/javascript">
     window.onesky = {
         app: {
@@ -57,7 +57,7 @@ We save an anonymous user's locale preference using cookies. By default, you do 
 
 ### Identified user
 We support to save an end user's locale preference if the identity is provided. You have to add the attribute `identifiedUser` on the page which the end user will browse, for example:
-```
+```javascript
 <script type="text/javascript">
     window.onesky = {
         app: {
