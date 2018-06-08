@@ -6,7 +6,7 @@ In Display interface texts in preferred language effect example, we have to extr
 In this example, we use [vue-i18n](https://github.com/kazupon/vue-i18n) as the i18n framework for Vue app.
 
 ## Installation
-Open the index.html ([example](https://github.com/onesky/onesky-for-web/blob/master/examples/single-page-apps/react-example-app/public/index.html)) file and include the source script from cdn by pasting code snippets inline of HTML code. You may reference the installation from the example in src/main.js
+Reference from the example in [src/main.js](https://github.com/onesky/onesky-for-web/blob/master/examples/single-page-apps/vue-example-app/src/main.js)
 
 The HTML tag `<language-selector></language-selector>` is the location where the localization effect selector rendered. You can adjust it's position by placing it inside lines of HTML code.
 
