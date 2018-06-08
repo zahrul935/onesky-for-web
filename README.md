@@ -32,8 +32,8 @@ The HTML tag `<language-selector></language-selector>` is the location where the
 For some localization effects, internationalization (i18n) is the pre-requisite of app localization. We have list of i18n building block suggestions depends on the tech stack picked in your web app.
 
 We have examples of single page apps in different JS frameworks such as
-- React
-- Vue
+- [React example app]https://github.com/onesky/onesky-for-web/tree/master/examples/single-page-apps/react-example-app
+- [Vue example app]https://github.com/onesky/onesky-for-web/tree/master/examples/single-page-apps/vue-example-app
 
 The installation steps of OneSky for Web might have slightly difference based on the i18n libraries your team picked. Please refer to our example readme for more details.
 
