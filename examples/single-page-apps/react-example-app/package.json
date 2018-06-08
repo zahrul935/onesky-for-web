@@ -1,0 +1,23 @@
+{
+  "name": "react-example-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "onesky-conductor": "^1.0.5",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-intl-universal": "^1.10.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "onesky-conductor --app-id $ONESKY_APP_ID --api-key $ONESKY_API_KEY --string-file-path public/locales ; react-scripts start",
+    "build": "onesky-conductor --app-id $ONESKY_APP_ID --api-key $ONESKY_API_KEY --string-file-path public/locales ; react-scripts build",
+    "test": "onesky-conductor --app-id $ONESKY_APP_ID --api-key $ONESKY_API_KEY --string-file-path public/locales ; react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5"
+  }
+}

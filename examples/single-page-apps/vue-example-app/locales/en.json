@@ -1,0 +1,5 @@
+{
+    "SIMPLE": "Simple Sentence",
+    "HELLO": "Hello, {name}. Welcome to {where}!",
+    "PHOTO": "You have no photos. | You have one photo. | You have {count} photos."
+}

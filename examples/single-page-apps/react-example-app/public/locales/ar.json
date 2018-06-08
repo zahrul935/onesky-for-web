@@ -1,0 +1,12 @@
+{
+    "SIMPLE": "جملة بسيطة",
+    "HELLO": "مرحبًا ، {name}. مرحبًا بك في {where}!",
+    "TIP": "هذا هو <span style='color: red'>HTML</span>",
+    "TIP_VAR": "هذا هو <span style='color: red'>{message}</span>",
+    "SALE_START": "يبدأ البيع {start, date}",
+    "SALE_END": "نهايات البيع {end, date, long}",
+    "COUPON": "تنتهي صلاحية الكوبون في {expires, time, medium}",
+    "SALE_PRICE": "السعر هو {price, number, USD}",
+    "PHOTO": "لديك {photoNum, plural, =0 {لا توجد صور} =1 {صورة واحدة} other {# الصور}}.",
+    "MESSAGE_NOT_IN_COMPONENT": "react-intl-universal قادر على تدويل الرسائل ليس في React.Component"
+}

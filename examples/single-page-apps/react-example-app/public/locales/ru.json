@@ -1,0 +1,12 @@
+{
+    "SIMPLE": "Простой приговор",
+    "HELLO": "Привет, {name}. Добро пожаловать в {where}!",
+    "TIP": "Это <span style='color:red'>HTML</span>",
+    "TIP_VAR": "Это <span style='color:red'>{message}</span>",
+    "SALE_START": "Начало продаж {start, date}",
+    "SALE_END": "Продажа заканчивается {end, date, long}",
+    "COUPON": "Срок действия купона истекает через {expires, time, medium}",
+    "SALE_PRICE": "Цена {price, number, USD}",
+    "PHOTO": "У вас есть {photoNum, plural, =0 {нет фото} =1 {одно фото} other {# фото}}.",
+    "MESSAGE_NOT_IN_COMPONENT": "react-intl-universal способен интернационализировать сообщение не в React.Component"
+}
