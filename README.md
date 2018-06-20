@@ -1,4 +1,4 @@
-![OneSky](https://github.com/onesky/onesky-for-web/blob/screenshots/screenshots/onesky-saas.png?raw=true)
+<img src="https://github.com/onesky/onesky-for-web/blob/screenshots/screenshots/onesky-saas.png?raw=true" height="65" />
 
 **OneSky for Web** helps developers actualize cross-platform localization experience quickly with out-of-box solutions. Save hundreds of hours in finding and trying out best practices. You can mix-and-match building blocks with your own implementations if needed.
 
