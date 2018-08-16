@@ -5,9 +5,9 @@
 ## Developer Hub
 https://developers.onesky.app
 
+## Installation
+[Installation guide for Web](https://developers.onesky.app/docs/web-installation)
+
 ## Live demos
 - [Live demo (Anonymous user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/anonymous_user.html)
 - [Live demo (Identified user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/identified_user.html)
-
-## Installation
-- [Installation guide for Web](https://developers.onesky.app/docs/web-installation)
