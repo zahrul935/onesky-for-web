@@ -1,7 +1,5 @@
-### [OneSky for Web](https://github.com/onesky/onesky-for-web)
-To streamline the app localization development flow, onesky-conductor retrieves string files via OneSky's App API and writes to specific folder for the web app. It executes before runtime.
-
-Configure your <b>onesky-conductor</b>
+# [OneSkyConductor for Web](https://github.com/onesky/onesky-for-web)
+To streamline the app localization development flow, onesky-conductor retrieves string files via OneSky's App API and writes to specific folder for the web app. It executes during app packing process.
 
 ## Install
 Install and save onesky-conductor to your web app
@@ -30,7 +28,7 @@ onesky-conductor --app-id 363228f3-3780-46a4-95ce-383396418be7 --api-key dd4b21e
 ```
 
 ### Adjust your npm-scripts
-In `package.json`, append the onesky-conductor command with corresponding arguments to scripts, for example:
+Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your project environment. Then in `package.json`, append the onesky-conductor command with corresponding arguments to scripts, for example:
 ```
 {
   "scripts": {
