@@ -1,4 +1,4 @@
-# [OneSkyConductor for Web](https://github.com/onesky/onesky-for-web)
+# OneSkyConductor for Web
 To streamline the app localization development flow, onesky-conductor retrieves string files via OneSky's App API and writes to specific folder for the web app. It executes during app packing process.
 
 ## Install
