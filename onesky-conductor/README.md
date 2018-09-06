@@ -1,4 +1,4 @@
-# OneSkyConductor for Web
+# onesky-conductor for Web
 To streamline the app localization development flow, onesky-conductor retrieves string files via OneSky's App API and writes to specific folder for the web app. It executes during app packing process.
 
 ## Install
@@ -24,7 +24,7 @@ onesky-conductor --help
 ### Example
 Download string files from Demp App
 ```
-onesky-conductor --app-id 363228f3-3780-46a4-95ce-383396418be7 --api-key dd4b21e9ef71e1291183a46b913ae6f2
+onesky-conductor --app-id ${ONESKY_APP_ID} --api-key ${ONESKY_API_KEY}
 ```
 
 ### Adjust your npm-scripts
@@ -41,7 +41,7 @@ Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your pro
 
 ### Run
 #### npm
-Now running `npm start` or `npm run build` will engage the app localization flow.
+If you use npm, run `npm start` or `npm run build` will engage the app localization flow.
 
 #### yarn
-Now running `yarn run` or `yarn build` will engage the app localization flow.
+If you use yarn, run `yarn run` or `yarn build` will engage the app localization flow.

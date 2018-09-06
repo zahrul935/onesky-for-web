@@ -3,7 +3,7 @@
 var program = require('commander');
  
 program
-  .version('1.0.7')
+  .version('1.0.8')
   .option('-a, --app-id <appId>', 'app Id')
   .option('-k, --api-key <apiKey>', 'API key for web for API authentication.')
   .option('-f, --file-format [fileFormat]', 'format that string file content represent.', 'json')
