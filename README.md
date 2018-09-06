@@ -3,11 +3,17 @@
 **OneSky for Web** helps developers actualize cross-platform localization experience quickly with out-of-box solutions. Save hundreds of hours in finding and trying out best practices. You can mix-and-match building blocks with your own implementations if needed.
 
 ## Developer Hub
-https://developers.onesky.app
+The [Developer Hub](https://developers.onesky.app) contains all the information developers need to build all kinds of integration with the OneSky.
 
-## Installation
-[Installation guide for Web](https://developers.onesky.app/docs/web-installation)
+## Setup and Configuration
+Our [installation guide](https://developers.onesky.app/docs/web-installation) contains full setup and initialisation instructions.
 
-## Live demos
-- [Live demo (Anonymous user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/anonymous_user.html)
-- [Live demo (Identified user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/identified_user.html)
+## Sample Apps
+Projects with some basic example integrations are provided
+- [Basic Javascript](https://github.com/onesky/onesky-for-web/tree/master/examples/basic-javascript)
+  - [Live demo (Anonymous user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/anonymous_user.html)
+  - [Live demo (Identified user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/identified_user.html)
+- [Single page apps](https://github.com/onesky/onesky-for-web/tree/master/examples/single-page-apps)
+
+## Customer Support
+If you bump into any problems or need more support, just create an issue [here](https://github.com/onesky/onesky-for-ios/issues) and it will be routed to our Customer Support Engineers.
