@@ -1,9 +1,10 @@
 #!/usr/bin/env node
  
 var program = require('commander');
+const sdkVersion = '1.0.9';
  
 program
-  .version('1.0.8')
+  .version(sdkVersion)
   .option('-a, --app-id <appId>', 'app Id')
   .option('-k, --api-key <apiKey>', 'API key for web for API authentication.')
   .option('-f, --file-format [fileFormat]', 'format that string file content represent.', 'json')
@@ -14,9 +15,9 @@ const request = require('request');
 const fs = require('fs');
 
 const apiInvokeUrl = 'https://app-api.onesky.app/v1';
-const platformId = 'web';
+const platformId = 'web-spa';
 
-request({url: `${apiInvokeUrl}/apps/${program.appId}?platformId=${platformId}`, headers:{'Authorization': `Bearer ${program.apiKey}`}}, (err, res, body) => {
+request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization': `Bearer ${program.apiKey}`, 'Platform': `${platformId}`, 'SDK-Version': `${sdkVersion}`}}, (err, res, body) => {
 
     try {
         /**
@@ -81,7 +82,7 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}?platformId=${platformId}`, 
                          * Statements that are executed if an exception is thrown in the try block.
                          */
                         if (e.message === "Response body must be exist") {
-                            console.warn(`String file of language id '${locale.id}' does not exist.`);
+                            console.warn('\x1b[33m%s\x1b[0m', `String file of language id '${locale.id}' does not exist.`);
                         }
                         else {
                             throw new Error(`${e.name + ":" + e.message + "\n" + e.stack}`);
@@ -92,7 +93,7 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}?platformId=${platformId}`, 
         });
     }
     else {
-        console.warn('No localization effect found, please define one in OneSky dashboard.');
+        console.error('\x1b[1;31m%s\x1b[0m', 'No localization effect found, please define one in OneSky dashboard.');
     }
 });
 
@@ -103,8 +104,13 @@ const saveFile = (path, fileName, body) =>
 
 const createFile = (path, fileName, body) => {
     fs.writeFile(`${path}/${fileName}`, body, (err) => {
-        if (err) throw err;
-
-        console.warn('\x1b[33m%s\x1b[0m', `String file ${fileName} has been saved to ${path}`);
+        if (err) {
+          if (err.code == 'ENOENT') {
+            console.error('\x1b[1;31m%s\x1b[0m', `Directory '${path}' not found, cannot save to ${err.path}`);
+          }
+        }
+        else {
+          console.info(`String file ${fileName} has been saved to ${path}`);
+        }
     });
 }

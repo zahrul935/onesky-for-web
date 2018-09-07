@@ -97,8 +97,10 @@ var OsAppApi = (function () {
             }
             httpRequest.open("GET", this.apiUrl + endpoint, true);
             if (this.authToken) {
-                httpRequest.setRequestHeader("Authorization", this.authToken);   
+                httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
             }
+            httpRequest.setRequestHeader("Platform", "web-basicjs");
+            httpRequest.setRequestHeader("Sdk-Version", "cdn");
             httpRequest.send(null);
         },
 
@@ -123,8 +125,10 @@ var OsAppApi = (function () {
             httpRequest.open("POST", this.apiUrl + endpoint, true);
             httpRequest.setRequestHeader("Content-Type", "application/json");
             if (this.authToken) {
-                httpRequest.setRequestHeader("Authorization", this.authToken);
+                httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
             }
+            httpRequest.setRequestHeader("Platform", "web-basicjs");
+            httpRequest.setRequestHeader("Sdk-Version", "cdn");
             httpRequest.send(body);
         }
     };
@@ -244,6 +248,8 @@ var OsAppApi = (function () {
                 return text.substring(0, textLengthLimit);
             });
             postBody.sourceTexts = limitedSourceTexts;
+
+            console.log(postBody.sourceTexts);
 
             httpClient.post(endpoint, JSON.stringify(postBody), function(response) {
                 return callback(response);
