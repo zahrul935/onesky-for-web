@@ -1,0 +1,129 @@
+<style>
+    .oswidget-dropdown-currency {
+        position: relative;
+        display: inline-block;
+    }
+    .oswidget-dropdown-currency-button {
+        padding: 0;
+        font-size: 13px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+    }
+    .oswidget-dropdown-currency-current-selection {
+        border: 1px #cacaca solid;
+        background-color: #fafafa;
+        padding:5px;
+        width:140px;
+    }
+    .oswidget-dropdown-currency-arrow {
+        float:right;
+    }
+    .oswidget-dropdown-currency-content {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        border: 1px solid #cacaca;
+        z-index: 99;
+    }
+    .oswidget-dropdown-currency-content a {
+        color: #333;
+        padding: 10px 10px 10px 10px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+    .oswidget-dropdown-currency-content a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+    .oswidget-dropdown-currency:hover .oswidget-dropdown-currency-content {
+        display: block;
+        background-color: #fafafa;
+    }
+    .oswidget-dropdown-currency:hover .oswidget-dropdown-currency-button {
+        color: #00a4bd;
+    }
+</style>
+
+<style>
+    .oswidget-dropdown-currency-rtl {
+        position: relative;
+        display: inline-block;
+    }
+    .oswidget-dropdown-currency-button-rtl {
+        padding: 0;
+        font-size: 13px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+    }
+    .oswidget-dropdown-currency-current-selection-rtl {
+        border: 1px #cacaca solid;
+        background-color: #fafafa;
+        padding:5px;
+        width:140px;
+    }
+    .oswidget-dropdown-currency-arrow-rtl {
+        float:left;
+    }
+    .oswidget-dropdown-currency-content-rtl {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2);
+        border: 1px solid #cacaca;
+        z-index: 99;
+    }
+    .oswidget-dropdown-currency-content-rtl a {
+        color: #333;
+        padding: 10px 10px 10px 10px;
+        text-decoration: none;
+        text-align: right;
+        display: block;
+    }
+    .oswidget-dropdown-currency-content-rtl a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+    .oswidget-dropdown-currency-rtl:hover .oswidget-dropdown-currency-content-rtl {
+        display: block;
+        background-color: #fafafa;
+    }
+    .oswidget-dropdown-currency-rtl:hover .oswidget-dropdown-currency-button-rtl {
+        color: #00a4bd;
+    }
+</style>
+
+<h2>Left to Right</h2>
+<div class="oswidget-dropdown-currency">
+  <button class="oswidget-dropdown-currency-button">
+    <div class="oswidget-dropdown-currency-current-selection">
+        HKD
+        <div class="oswidget-dropdown-currency-arrow">&#x25BE;</div>
+    </div>
+    <div class="oswidget-dropdown-currency-content">
+      <a>United States Dollar</a>
+      <a>Currency 2</a>
+      <a>Currency 3</a>
+    </div>
+  </button>
+</div>
+
+<br/><br/><br/><br/>
+
+<h2>Right to Left</h2>
+<div class="oswidget-dropdown-currency-rtl">
+  <button class="oswidget-dropdown-currency-button-rtl">
+    <div class="oswidget-dropdown-currency-current-selection-rtl">
+        HKD
+        <div class="oswidget-dropdown-currency-arrow-rtl">&#x25BE;</div>
+    </div>
+    <div class="oswidget-dropdown-currency-content-rtl">
+      <a>United States Dollar</a>
+      <a>Currency 2</a>
+      <a>Currency 3</a>
+    </div>
+  </button>
+</div>

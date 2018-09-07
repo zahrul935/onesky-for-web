@@ -1,0 +1,144 @@
+<style>
+    .oswidget-dropdown-language {
+        position: relative;
+        display: inline-block;
+    }
+    .oswidget-dropdown-language-button {
+        padding: 0;
+        font-size: 13px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+    }
+    .oswidget-dropdown-language-current-selection {
+        border: 1px #cacaca solid;
+        background-color: #fafafa;
+        padding:5px 5px 5px 20px;
+        width:170px;
+        background-image: url('../src/images/global.png');
+        background-repeat: no-repeat;
+        background-size: 19px 19px;
+        background-position: 4px 50%;
+    }
+    .oswidget-dropdown-language-current-selection-name {
+        width:150px;
+    }
+    .oswidget-dropdown-language-arrow {
+        float:right;
+    }
+    .oswidget-dropdown-language-content {
+        display: none;
+        position: absolute;
+        min-width: 195px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        border: 1px solid #cacaca;
+        z-index: 99;
+    }
+    .oswidget-dropdown-language-content a {
+        color: #333;
+        padding: 10px 10px 10px 32px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+    .oswidget-dropdown-language-content a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+    .oswidget-dropdown-language:hover .oswidget-dropdown-language-content {
+        display: block;
+        background-color: #fafafa;
+    }
+    .oswidget-dropdown-language:hover .oswidget-dropdown-language-button {
+        color: #00a4bd;
+    }
+</style>
+
+<style>
+    .oswidget-dropdown-language-rtl {
+        position: relative;
+        display: inline-block;
+    }
+    .oswidget-dropdown-language-button-rtl {
+        padding: 0;
+        font-size: 13px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+    }
+    .oswidget-dropdown-language-current-selection-rtl {
+        border: 1px #cacaca solid;
+        background-color: #fafafa;
+        padding:5px 20px 5px 5px;
+        width:170px;
+        background-image: url('../src/images/global.png');
+        background-repeat: no-repeat;
+        background-size: 19px 19px;
+        background-position: 171px 50%;
+    }
+    .oswidget-dropdown-language-current-selection-name-rtl {
+        width:150px;
+    }
+    .oswidget-dropdown-language-arrow-rtl {
+        float:left;
+    }
+    .oswidget-dropdown-language-content-rtl {
+        display: none;
+        position: absolute;
+        min-width: 195px;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2);
+        border: 1px solid #cacaca;
+        z-index: 99;
+    }
+    .oswidget-dropdown-language-content-rtl a {
+        color: #333;
+        padding: 10px 32px 10px 10px;
+        text-decoration: none;
+        text-align: right;
+        display: block;
+    }
+    .oswidget-dropdown-language-content-rtl a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+    .oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-content-rtl {
+        display: block;
+        background-color: #fafafa;
+    }
+    .oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-button-rtl {
+        color: #00a4bd;
+    }
+</style>
+
+<h2>Left to Right</h2>
+<div class="oswidget-dropdown-language">
+  <button class="oswidget-dropdown-language-button">
+    <div class="oswidget-dropdown-language-current-selection">
+        <span class="oswidget-dropdown-language-current-selection-name">English (United States)</span>
+        <div class="oswidget-dropdown-language-arrow">&#x25BE;</div>
+    </div>
+    <div class="oswidget-dropdown-language-content">
+      <a>Language 1</a>
+      <a>Language 2</a>
+      <a>Language 3</a>
+    </div>
+  </button>
+</div>
+
+<br/><br/><br/><br/>
+
+<h2>Right to Left</h2>
+<div class="oswidget-dropdown-language-rtl">
+  <button class="oswidget-dropdown-language-button-rtl">
+    <div class="oswidget-dropdown-language-current-selection-rtl">
+        <span class="oswidget-dropdown-language-current-selection-name-rtl">English (United States)</span>
+        <div class="oswidget-dropdown-language-arrow-rtl">&#x25BE;</div>
+    </div>
+    <div class="oswidget-dropdown-language-content-rtl">
+      <a>Language 1</a>
+      <a>Language 2</a>
+      <a>Language 3</a>
+    </div>
+  </button>
+</div>
+
