@@ -11,7 +11,7 @@
         selectorRenders: new Array(),   // {type: _type, render: _render}
 
         init: function () {
-            window.addEventListener('load', function () {
+            document.addEventListener('DOMContentLoaded', function () {
                 OsWidget.reloaded = true;
                 OsWidget.translates = {};
                 OsWidget.sourceTexts = [];
@@ -25,6 +25,19 @@
             });
         },
 
+        replace: function () {
+            OsWidget.reloaded = true;
+            OsWidget.translates = {};
+            OsWidget.sourceTexts = [];
+            OsWidget.originalTextNodes = [];
+            OsWidget.loadOriginalTextNodes(document.body);
+            OsWidget.loadOriginalText();
+            OsWidget.initWithUrl('display-language');
+            OsWidget.loaders.forEach(function (loaderObject) {
+                loaderObject.loader();
+            });
+        },
+
         // handle selector's selected options according to url hostname, path or query
         initWithUrl: function (experienceType) {
             var displayLanguageFromUrl =
@@ -32,7 +45,7 @@
                 OsWidget.getUrlPathLocaleFromMappedLocation(experienceType) ||
                 OsWidget.getUrlHostnameLocaleFromMappedLocation(experienceType);
             if (displayLanguageFromUrl) {
-                
+
                 var targetLocale = null;
 
                 var matchedOption = OsSelectors.find(function (selector) {
@@ -168,7 +181,7 @@
 
             // do translation via App API
             if (!OsWidget.translates[targetLanguageId]) {
-                OsAppApi.translateAppTexts(onesky.app.id, jsonObj, function (response) {
+                OsAppApi.translateAppTexts(onesky.app.apiKey, onesky.app.id, jsonObj, function (response) {
                     OsWidget.translates[targetLanguageId] = response.translations;
                     replaceText(OsWidget.translates[targetLanguageId]);
                 });
@@ -435,7 +448,7 @@ Display Language Module
     // called by widget init
     var _loader = function () {
         var displayLanguageSelector = OsAppApi.findAppSelectorByExperienceType(OsSelectors, _type);
-        OsAppApi.loadUserDisplayLanguage(onesky.app.id, OsWidget.getUser(), displayLanguageSelector, function (preferencedValues) {
+        OsAppApi.loadUserDisplayLanguage(onesky.app.apiKey, onesky.app.id, OsWidget.getUser(), displayLanguageSelector, function (preferencedValues) {
             OsWidget.render(_type, preferencedValues);
         });
     }
@@ -528,6 +541,8 @@ Display Language Module
         // selector option (this.value) is a platform locale
         var platformLocale = this.value;
 
+        var targetLocale = null;
+        var direction = null;
         // the displayLanguageFromUrl is platform locale, we need to convert it to locale id for matching
         targetLocale = _selector.locales.find(function (locale) {
             return locale.platformLocale == platformLocale;
@@ -554,7 +569,7 @@ Display Language Module
             }
         }
 
-        OsAppApi.saveUserDisplayLanguage(onesky.app.id, OsWidget.getUser(), targetLocale.id, function (response) {
+        OsAppApi.saveUserDisplayLanguage(onesky.app.apiKey, onesky.app.id, OsWidget.getUser(), targetLocale.id, function (response) {
             OsWidget.reloaded = false;
             OsWidget.webTransition(_selector, [targetLocale.platformLocale]);
         });
