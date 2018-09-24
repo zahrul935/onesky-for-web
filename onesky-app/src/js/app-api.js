@@ -1,10 +1,10 @@
 var OsAppApi = (function () {
-  
+
     var _cookieExpirationDays = 3650;
 
-    var _loadRemoteStoredPreferences = function(appId, user, experienceType, callback, nextLoad) {
+    var _loadRemoteStoredPreferences = function(apiKey, appId, user, experienceType, callback, nextLoad) {
         var endpoint = '/apps/' + appId + '/users/' + user.id
-        var httpClient = new AppApiClient();
+        var httpClient = new AppApiClient(apiKey);
         if(user.hasOwnProperty('userHash')){
             httpClient.setAuthToken(user.userHash);
         }
@@ -31,14 +31,14 @@ var OsAppApi = (function () {
         if (cookieValue) {
             return callback(cookieValue.split(','));
         }
-        
+
         if (nextLoad) {
             return nextLoad(callback);
         }
     };
 
     var _loadLocalSettingPreferences = function(experienceType, callback, nextLoad) {
-        
+
         if (experienceType === 'display-language') {
             // Begin load user's preferred languages from browser setting
             if(typeof window.navigator.languages != 'undefined' && typeof window.navigator.languages[0] == 'string'){
@@ -68,18 +68,19 @@ var OsAppApi = (function () {
         }
     };
 
-    var AppApiClient = function() {
+    var AppApiClient = function(apiKey) {
 
         this.authToken = null;
         this.apiUrl = 'https://app-api.onesky.app/v1';
+        this.apiKey = apiKey;
 
         this.setAuthToken = function(authToken) {
             this.authToken = typeof authToken !== 'undefined' ? authToken : null;
         },
-        
+
         this.get = function(endpoint, callback) {
             var httpRequest = new XMLHttpRequest();
-            httpRequest.onreadystatechange = function() { 
+            httpRequest.onreadystatechange = function() {
                 if (httpRequest.readyState == 4) {
                     if (httpRequest.status == 200) {
                         try {
@@ -99,6 +100,7 @@ var OsAppApi = (function () {
             if (this.authToken) {
                 httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
             }
+            httpRequest.setRequestHeader("Authorization", "Bearer " + apiKey);
             httpRequest.setRequestHeader("Platform", "web-basicjs");
             httpRequest.setRequestHeader("Sdk-Version", "cdn");
             httpRequest.send(null);
@@ -106,7 +108,7 @@ var OsAppApi = (function () {
 
         this.post = function(endpoint, body, callback) {
             var httpRequest = new XMLHttpRequest();
-            httpRequest.onreadystatechange = function() { 
+            httpRequest.onreadystatechange = function() {
                 if (httpRequest.readyState == 4) {
                     if (httpRequest.status == 200) {
                         try {
@@ -127,17 +129,18 @@ var OsAppApi = (function () {
             if (this.authToken) {
                 httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
             }
+            httpRequest.setRequestHeader("Authorization", "Bearer " + apiKey);
             httpRequest.setRequestHeader("Platform", "web-basicjs");
             httpRequest.setRequestHeader("Sdk-Version", "cdn");
             httpRequest.send(body);
         }
     };
 
-    var getAppSelectorsByAppId = function(appId, displayLanguageId, callback) {
+    var getAppSelectorsByAppId = function(apiKey, appId, displayLanguageId, callback) {
 
-        var httpClient = new AppApiClient();
+        var httpClient = new AppApiClient(apiKey);
         httpClient.get('/apps/' + appId + '?languageId=' + displayLanguageId, function(response) {
-            
+
             if (response) {
                 return callback(response.app.selectors);
             }
@@ -154,7 +157,7 @@ var OsAppApi = (function () {
         });
     }
 
-    var readPreferenceValues = function(appId, user, experienceType, respectOrder, fallbackValue, callback) {
+    var readPreferenceValues = function(apiKey, appId, user, experienceType, respectOrder, fallbackValue, callback) {
 
         var isAutoDetectionEnabled = respectOrder.includes('auto-detection');
         var isAutoDetectionFirst = respectOrder[0] === 'auto-detection';
@@ -166,7 +169,7 @@ var OsAppApi = (function () {
                 return _loadLocalStoredPreferences(appId, user, experienceType, callback, function(){
                     // then remote stored
                     if (appId && user) {
-                        return _loadRemoteStoredPreferences(appId, user, experienceType, callback, null);
+                        return _loadRemoteStoredPreferences(apiKey, appId, user, experienceType, callback, null);
                     }
                 });
             });
@@ -176,7 +179,7 @@ var OsAppApi = (function () {
             return _loadLocalStoredPreferences(appId, user, experienceType, callback, function(){
                 // then remote stored
                 if (appId && user) {
-                    return _loadRemoteStoredPreferences(appId, user, experienceType, callback, function(){
+                    return _loadRemoteStoredPreferences(apiKey, appId, user, experienceType, callback, function(){
                         // then local setting
                         return _loadLocalSettingPreferences(experienceType, callback, null);
                     });
@@ -193,7 +196,7 @@ var OsAppApi = (function () {
         return callback([fallbackValue]);
     };
 
-    var writePreferenceValues = function(appId, user, experienceType, preferenceValues, callback) {
+    var writePreferenceValues = function(apiKey, appId, user, experienceType, preferenceValues, callback) {
         // Begin store user preference in cookie for both anonymous and identified user
         var cookieAppId = appId ? '_' + appId : '';
         var cookieUserId = user ? '_' + user.id : '';
@@ -209,11 +212,11 @@ var OsAppApi = (function () {
         // Begin call Locale API to save identified user languages
         if (appId && user) {
             var endpoint = '/apps/' + appId + '/users/' + user.id
-            var httpClient = new AppApiClient();
+            var httpClient = new AppApiClient(apiKey);
             if(user.hasOwnProperty('userHash')){
                 httpClient.setAuthToken(user.userHash);
             }
-            
+
             var userName = typeof user.name != 'undefined' ? user.name : null;
             var userEmail = typeof user.email != 'undefined' ? user.email : null;
 
@@ -236,11 +239,11 @@ var OsAppApi = (function () {
         }
     };
 
-    var translateAppTexts = function(appId, postBody, callback) {
+    var translateAppTexts = function(apiKey, appId, postBody, callback) {
         // Begin call Locale API to save identified user languages
-        if (appId && postBody) {
+        if (apiKey && appId && postBody) {
             var endpoint = '/apps/' + appId + '/translations';
-            var httpClient = new AppApiClient();
+            var httpClient = new AppApiClient(apiKey);
 
             // limit the source content to length limit
             var textLengthLimit = 5000;
@@ -299,16 +302,16 @@ Display Language Preference Module
 
     var _experienceType = 'display-language';
 
-    OsAppApi.loadUserDisplayLanguage = function(appId, user, appSelector, callback){
-        OsAppApi.readPreferenceValues(appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
+    OsAppApi.loadUserDisplayLanguage = function(apiKey, appId, user, appSelector, callback){
+        OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
             return callback(preferences);
         });
     };
 
-    OsAppApi.saveUserDisplayLanguage = function(appId, user, value, callback) {
-        return OsAppApi.writePreferenceValues(appId, user, _experienceType, [value], callback);
+    OsAppApi.saveUserDisplayLanguage = function(apiKey, appId, user, value, callback) {
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, [value], callback);
     };
-    
+
     return OsAppApi;
 
 })(OsAppApi || {});
@@ -321,14 +324,14 @@ Interested Regions Preference Module
 
     var _experienceType = 'interested-regions';
 
-    OsAppApi.loadUserInterestedRegions = function(appId, user, appSelector, callback){
-        OsAppApi.readPreferenceValues(appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
+    OsAppApi.loadUserInterestedRegions = function(apiKey, appId, user, appSelector, callback){
+        OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
             return callback(preferences);
         });
     };
 
-    OsAppApi.saveUserInterestedRegions = function(appId, user, values, callback){
-        return OsAppApi.writePreferenceValues(appId, user, _experienceType, values, callback);
+    OsAppApi.saveUserInterestedRegions = function(apiKey, appId, user, values, callback){
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, values, callback);
     };
 
     return OsAppApi;
@@ -343,16 +346,16 @@ Display Currency Preference Module
 
     var _experienceType = 'display-currency';
 
-    OsAppApi.loadUserDisplayCurrency = function(appId, user, appSelector, callback){
-        OsAppApi.readPreferenceValues(appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
+    OsAppApi.loadUserDisplayCurrency = function(apiKey, appId, user, appSelector, callback){
+        OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
             return callback(preferences);
         });
     };
 
-    OsAppApi.saveUserDisplayCurrency = function(appId, user, value, callback) {
-        return OsAppApi.writePreferenceValues(appId, user, _experienceType, [value], callback);
+    OsAppApi.saveUserDisplayCurrency = function(apiKey, appId, user, value, callback) {
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, [value], callback);
     };
-    
+
     return OsAppApi;
 
 })(OsAppApi);
@@ -365,16 +368,16 @@ Stationed Timezone Preference Module
 
     var _experienceType = 'display-timezone';
 
-    OsAppApi.loadUserStationedTimezone = function(appId, user, appSelector, callback){
-        OsAppApi.readPreferenceValues(appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
+    OsAppApi.loadUserStationedTimezone = function(apiKey, appId, user, appSelector, callback){
+        OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
             return callback(preferences);
         });
     };
 
-    OsAppApi.saveUserStationedTimezone = function(appId, user, value, callback) {
-        return OsAppApi.writePreferenceValues(appId, user, _experienceType, [value], callback);
+    OsAppApi.saveUserStationedTimezone = function(apiKey, appId, user, value, callback) {
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, [value], callback);
     };
-    
+
     return OsAppApi;
 
 })(OsAppApi);
