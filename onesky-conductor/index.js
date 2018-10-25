@@ -1,8 +1,8 @@
 #!/usr/bin/env node
- 
+
 var program = require('commander');
 const sdkVersion = '1.0.9';
- 
+
 program
   .version(sdkVersion)
   .option('-a, --app-id <appId>', 'app Id')
@@ -48,12 +48,17 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
 
     if (body.app.selectors) {
         body.app.selectors.map((selector) => {
+            /**
+             * Only to request string files for display-language type
+             */
+            if (selector.type !== 'display-language') return;
+
             selector.locales.map(locale => {
                 request({url: `${apiInvokeUrl}/apps/${program.appId}/string-files?languageId=${locale.id}&fileFormat=${program.fileFormat}`, headers:{'Authorization': `Bearer ${program.apiKey}`}}, (err, res, body) => {
                     try {
 
                         /**
-                        * Only to download string files for display-language type
+                        * Only to save string files for display-language type
                         */
                         if (selector.type === 'display-language') {
                           /**
@@ -69,7 +74,7 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
                           if (!body) {
                               throw new Error('Response body must be exist');
                           }
-                        
+
                             /**
                              * Create string files
                              */
