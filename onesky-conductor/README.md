@@ -1,5 +1,5 @@
 # onesky-conductor for Web
-To streamline the app localization development flow, onesky-conductor retrieves string files via OneSky's App API and writes to specific folder for the web app. It executes during app packing process. For more information, please refer to our [Developer hub](https://developers.onesky.app/docs/web-installation).
+To streamline the app localization development flow, onesky-conductor retrieves string files via OneSky's App API and writes to specific folder for the web app. It executes during app packing process. For more information, please refer to our [Developer Hub](https://developers.onesky.app/docs/web-installation).
 
 ## Install
 Install and save onesky-conductor to your web app
