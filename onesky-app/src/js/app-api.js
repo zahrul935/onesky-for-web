@@ -86,8 +86,8 @@ var OsAppApi = (function () {
                         try {
                             return callback(JSON.parse(httpRequest.responseText));
                         } catch(err) {
-                            console.log("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
-                            console.log(err);
+                            console.error("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
+                            console.error(err);
                             return callback(null);
                         }
                     }
@@ -114,8 +114,8 @@ var OsAppApi = (function () {
                         try {
                             return callback(JSON.parse(httpRequest.responseText));
                         } catch(err) {
-                            console.log("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
-                            console.log(err);
+                            console.error("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
+                            console.error(err);
                             return callback(httpRequest.responseText);
                         }
                     }
@@ -239,27 +239,6 @@ var OsAppApi = (function () {
         }
     };
 
-    var translateAppTexts = function(apiKey, appId, postBody, callback) {
-        // Begin call Locale API to save identified user languages
-        if (apiKey && appId && postBody) {
-            var endpoint = '/apps/' + appId + '/translations';
-            var httpClient = new AppApiClient(apiKey);
-
-            // limit the source content to length limit
-            var textLengthLimit = 5000;
-            var limitedSourceTexts = postBody.sourceTexts.map(function(text){
-                return text.substring(0, textLengthLimit);
-            });
-            postBody.sourceTexts = limitedSourceTexts;
-
-            console.log(postBody.sourceTexts);
-
-            httpClient.post(endpoint, JSON.stringify(postBody), function(response) {
-                return callback(response);
-            });
-        }
-    };
-
     var readCookie = function(cookieKey) {
         var name = cookieKey + "=";
         var ca = document.cookie.split(';');
@@ -288,8 +267,7 @@ var OsAppApi = (function () {
         readCookie: readCookie,
         writeCookie: writeCookie,
         readPreferenceValues: readPreferenceValues,
-        writePreferenceValues: writePreferenceValues,
-        translateAppTexts: translateAppTexts
+        writePreferenceValues: writePreferenceValues
     };
 
 })();

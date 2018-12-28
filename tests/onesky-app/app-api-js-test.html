@@ -7,19 +7,20 @@
 
 <script>
 
-    var appId = 'local-test-with-any-id'; // when testing, replace with a real App Id
+    var appId = '882dd02d-e2ba-46a6-82ac-3a5aa389ee1f'; // onesky-for-web demo app id
+    var apiKey = 'cfd9f8ea05973915e7f80caf3b8e6967'; // onesky-for-web demo api key
 
     var user = {
-        id: '123456789',
+        id: 'your-user-id',
         name: 'Peter',
-        email: 'peter@gmail.com'
+        email: 'peter@youruseremail.com'
     }
 
-    OsAppApi.getAppSelectorsByAppId(appId, 'en', function(appSelectors) {
+    OsAppApi.getAppSelectorsByAppId(apiKey, appId, 'en', function(appSelectors) {
         console.log('* App selectors loaded with default language (en):');
         console.log(JSON.stringify(appSelectors));
 
-        OsAppApi.saveUserDisplayLanguage(appId, user, 'zh_Hant', function(response) {
+        OsAppApi.saveUserDisplayLanguage(apiKey, appId, user, 'zh_Hant', function(response) {
             console.log("* Saved user's display language preference:");
             console.log(response.message);
         });
@@ -28,13 +29,13 @@
         console.log('* Loaded display-language selector:');
         console.log(JSON.stringify(appSelector));
 
-        OsAppApi.loadUserDisplayLanguage(appId, user, appSelector, function(preferencedValue) {
+        OsAppApi.loadUserDisplayLanguage(apiKey, appId, user, appSelector, function(preferencedValue) {
             console.log("* Loaded user's display language preference:");
             console.log(JSON.stringify(preferencedValue));
         });
     });
 
-    OsAppApi.getAppSelectorsByAppId(appId, 'zh_Hant_TW', function(response) {
+    OsAppApi.getAppSelectorsByAppId(apiKey, appId, 'zh_Hant_TW', function(response) {
         console.log('* Loaded display-language selector in zh_Hant_TW:');
         console.log(JSON.stringify(response));
     });

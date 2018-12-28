@@ -10,10 +10,7 @@ Our [installation guide](https://developers.onesky.app/docs/web-installation) co
 
 ## Sample Apps
 Projects with some basic example integrations are provided
-- [Basic Javascript](https://github.com/onesky/onesky-for-web/tree/master/examples/basic-javascript)
-  - [Live demo (Anonymous user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/anonymous_user.html)
-  - [Live demo (Identified user)](https://onesky.github.io/onesky-for-web/examples/basic-javascript/identified_user.html)
-- [Single page apps](https://github.com/onesky/onesky-for-web/tree/master/examples/single-page-apps)
+- [Single page apps](https://github.com/onesky/onesky-for-web/tree/master/examples)
 
 ## Customer Support
 If you bump into any problems or need more support, just create an issue [here](https://github.com/onesky/onesky-for-ios/issues) and it will be routed to our Customer Support Engineers.

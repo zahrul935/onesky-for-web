@@ -1,11 +1,11 @@
 {
   "name": "onesky-conductor-test",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "private": true,
   "dependencies": {
     "onesky-conductor": "file:../../onesky-conductor"
   },
   "scripts": {
-    "test": "onesky-conductor --app-id 94a3ecf8-0134-4c3b-a3a8-b6c90f14d57a --api-key 123 --string-file-path locales"
+    "test": "onesky-conductor --app-id 882dd02d-e2ba-46a6-82ac-3a5aa389ee1f --api-key cfd9f8ea05973915e7f80caf3b8e6967 --string-file-path locales"
   }
 }
