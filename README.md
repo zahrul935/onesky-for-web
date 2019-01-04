@@ -14,3 +14,6 @@ Projects with some basic example integrations are provided
 
 ## Customer Support
 If you bump into any problems or need more support, just create an issue [here](https://github.com/onesky/onesky-for-ios/issues) and it will be routed to our Customer Support Engineers.
+
+## Code of conduct
+Participation in the community is governed by the [Code of Conduct](code-of-conduct.md).
