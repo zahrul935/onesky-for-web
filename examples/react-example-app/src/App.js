@@ -13,6 +13,12 @@ class App extends Component {
   };
 
   componentDidMount() {
+    window.onesky.identifiedUser = {
+      id: 'some_id',
+      name: 'Some name',
+      email: 'some_email@someemailserver.com'
+    }
+    window.OsWidget.replace();
     this.loadLocalizedContents();
   }
 
@@ -54,7 +60,7 @@ class App extends Component {
             if(err.config.hasOwnProperty('url')){
               const missingFile = err.config.url.split('/').pop();
               const missingLocale = missingFile.split('.').shift();
-              
+
               // get the fallback locale from cookie
               const fallbackLocale = decodeURIComponent(document.cookie).split(';').find(function(value){
                 return value.split('=')[0].trim() === cookieLocaleKey;
