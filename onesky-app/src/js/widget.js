@@ -19,6 +19,13 @@
             });
         },
 
+        replace: function () {
+            OsWidget.initWithUrl('display-language');
+            OsWidget.loaders.forEach(function (loaderObject) {
+                loaderObject.loader();
+            });
+        },
+
         // handle selector's selected options according to url hostname, path or query
         initWithUrl: function (experienceType) {
             var displayLanguageFromUrl =
