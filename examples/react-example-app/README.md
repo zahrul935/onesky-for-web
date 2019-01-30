@@ -48,3 +48,9 @@ To add string files transfer in the process, in `package.json`, modify `scripts`
   }
 }
 ```
+
+## Run
+```
+  yarn
+  yarn run start
+```
