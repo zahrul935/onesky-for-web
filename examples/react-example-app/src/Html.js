@@ -4,12 +4,18 @@ import util from './util'
 
 class HtmlComponent extends Component {
     render() {
+        let { region } = this.props;
         let price = 123456.78;
         let start = new Date();
         let end = new Date();
         let expires = new Date();
         return (
             <div>
+                {
+                    region && (
+                        <p>Redirected to { region } site</p>
+                    )
+                }
                 <p>{intl.get('SIMPLE')}</p>
                 <p>{intl.get('HELLO', {name:'User', where:'OneSky'})}</p>
                 <p>{intl.get("PHOTO", { photoNum: 0 })}</p>
