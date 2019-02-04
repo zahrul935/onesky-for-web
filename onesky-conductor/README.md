@@ -46,6 +46,8 @@ Then in `package.json`, append the onesky-conductor command with corresponding a
 ```
 
 ### Run
+Under the folder `onesky-for-web/examples/react-example-app`:
+
 #### npm
 If you use npm, run `npm start` or `npm run build` will engage the app localization flow.
 
