@@ -7,7 +7,7 @@ import http from "axios";
 class App extends Component {
   state = {
     initDone: false,
-    oneskyAppId: "f99ea11d-4a9a-45dc-a226-611efcc024c2",
+    oneskyAppId: "aa339d82-7365-406b-af92-f3d1f4c77651",
     oneskyCookieKeyPrefix: "os_display-language_",
     urlLocaleKey: "lang"
   };
@@ -23,10 +23,12 @@ class App extends Component {
   }
 
   render() {
+    var url = new URL(window.location.href);
+    var region = url.searchParams.get("region");
     return (
       this.state.initDone &&
       <div>
-        <HtmlComponent />
+        <HtmlComponent region={ region } />
       </div>
     );
   }

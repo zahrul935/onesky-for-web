@@ -274,8 +274,8 @@ var OsAppApi = (function () {
 
 
 /**
-Display Language Preference Module
-*/
+ Display Language Preference Module
+ */
 (function (OsAppApi) {
 
     var _experienceType = 'display-language';
@@ -296,20 +296,20 @@ Display Language Preference Module
 
 
 /**
-Interested Regions Preference Module
-*/
+ Display Region Preference Module
+ */
 (function (OsAppApi) {
 
     var _experienceType = 'interested-regions';
 
-    OsAppApi.loadUserInterestedRegions = function(apiKey, appId, user, appSelector, callback){
+    OsAppApi.loadUserDisplayRegion = function(apiKey, appId, user, appSelector, callback){
         OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
             return callback(preferences);
         });
     };
 
-    OsAppApi.saveUserInterestedRegions = function(apiKey, appId, user, values, callback){
-        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, values, callback);
+    OsAppApi.saveUserDisplayRegion = function(apiKey, appId, user, value, callback){
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, [value], callback);
     };
 
     return OsAppApi;
@@ -318,8 +318,8 @@ Interested Regions Preference Module
 
 
 /**
-Display Currency Preference Module
-*/
+ Display Currency Preference Module
+ */
 (function (OsAppApi) {
 
     var _experienceType = 'display-currency';
@@ -340,8 +340,8 @@ Display Currency Preference Module
 
 
 /**
-Stationed Timezone Preference Module
-*/
+ Stationed Timezone Preference Module
+ */
 (function (OsAppApi) {
 
     var _experienceType = 'display-timezone';
