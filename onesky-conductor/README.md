@@ -28,7 +28,13 @@ onesky-conductor --app-id ${ONESKY_APP_ID} --api-key ${ONESKY_API_KEY}
 ```
 
 ### Adjust your npm-scripts
-Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your project environment. Then in `package.json`, append the onesky-conductor command with corresponding arguments to scripts, for example:
+Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your project environment, for example,
+```
+export ONESKY_APP_ID=aa339d82-7365-406b-af92-f3d1f4c77651
+export ONESKY_API_KEY=291878c9b5de3fbdf7bedff8570c3d68
+```
+
+Then in `package.json`, append the onesky-conductor command with corresponding arguments to scripts, for example:
 ```
 {
   "scripts": {
