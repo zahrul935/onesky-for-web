@@ -49,7 +49,27 @@ Then in `package.json`, append the onesky-conductor command with corresponding a
 Under the folder `onesky-for-web/examples/react-example-app`:
 
 #### npm
-If you use npm, run `npm start` or `npm run build` will engage the app localization flow.
+If you use npm, run the following commands to engage the app localization flow:
+```
+# install
+npm install
+
+# run on local machine
+npm start
+
+# pack for production
+npm run build
+```
 
 #### yarn
-If you use yarn, run `yarn run` or `yarn build` will engage the app localization flow.
+If you use yarn, run the following commands to engage the app localization flow:
+```
+# install
+yarn
+
+# run on local machine
+yarn run
+
+# pack for production
+yarn build
+```
