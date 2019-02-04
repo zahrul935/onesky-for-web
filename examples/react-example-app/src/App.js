@@ -7,7 +7,7 @@ import http from "axios";
 class App extends Component {
   state = {
     initDone: false,
-    oneskyAppId: "efd63c78-e796-42a9-a071-29e8b5639439",
+    oneskyAppId: "aa339d82-7365-406b-af92-f3d1f4c77651",
     oneskyCookieKeyPrefix: "os_display-language_",
     urlLocaleKey: "lang"
   };
