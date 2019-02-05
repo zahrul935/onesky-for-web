@@ -28,7 +28,13 @@ onesky-conductor --app-id ${ONESKY_APP_ID} --api-key ${ONESKY_API_KEY}
 ```
 
 ### Adjust your npm-scripts
-Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your project environment. Then in `package.json`, append the onesky-conductor command with corresponding arguments to scripts, for example:
+Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your project environment, for example,
+```
+export ONESKY_APP_ID=aa339d82-7365-406b-af92-f3d1f4c77651
+export ONESKY_API_KEY=291878c9b5de3fbdf7bedff8570c3d68
+```
+
+Then in `package.json`, append the onesky-conductor command with corresponding arguments to scripts, for example:
 ```
 {
   "scripts": {
@@ -40,8 +46,30 @@ Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your pro
 ```
 
 ### Run
+Under the folder `onesky-for-web/examples/react-example-app`:
+
 #### npm
-If you use npm, run `npm start` or `npm run build` will engage the app localization flow.
+If you use npm, run the following commands to engage the app localization flow:
+```
+# install
+npm install
+
+# run on local machine
+npm start
+
+# pack for production
+npm run build
+```
 
 #### yarn
-If you use yarn, run `yarn run` or `yarn build` will engage the app localization flow.
+If you use yarn, run the following commands to engage the app localization flow:
+```
+# install
+yarn
+
+# run on local machine
+yarn run
+
+# pack for production
+yarn build
+```

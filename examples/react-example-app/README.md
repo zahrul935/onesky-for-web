@@ -11,11 +11,11 @@ In this example, we use [react-intl-universal](https://github.com/alibaba/react-
 Open the index.html ([example](https://github.com/onesky/onesky-for-web/blob/master/examples/single-page-apps/react-example-app/public/index.html)) file and include the source script from cdn by pasting code snippets inline of HTML code, for example
 
 ```
-<script src="https://cdn.onesky.app/widget/363228f3-3780-46a4-95ce-383396418be7"></script>
+<script src="https://cdn.onesky.app/widget/aa339d82-7365-406b-af92-f3d1f4c77651"></script>
 <script type="text/javascript">
     window.onesky = {
         app: {
-            id: '363228f3-3780-46a4-95ce-383396418be7'
+            id: 'aa339d82-7365-406b-af92-f3d1f4c77651'
         }
     };
 </script>
