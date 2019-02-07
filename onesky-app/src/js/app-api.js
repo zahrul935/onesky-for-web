@@ -300,7 +300,7 @@ var OsAppApi = (function () {
  */
 (function (OsAppApi) {
 
-    var _experienceType = 'interested-regions';
+    var _experienceType = 'display-region';
 
     OsAppApi.loadUserDisplayRegion = function(apiKey, appId, user, appSelector, callback){
         OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){

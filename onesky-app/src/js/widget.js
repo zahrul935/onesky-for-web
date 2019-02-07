@@ -2,7 +2,7 @@
 
     // Begin code-gen: Selector of app rule
     console.log("Keep this placeholder mark for selectors code generation: begin");
-    window.OsSelectors = [{"type":"display-language","htmlTag":"language-selector","theme":"general","options":["ar_AE","en_US","ru_RU","zh_Hans_CN","zh_Hant_TW"],"defaultValue":"en_US","respectOrder":["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"ar_AE","location":"?lang=ar-AE"},{"localeId":"en_US","location":"?lang=en-US"},{"localeId":"ru_RU","location":"?lang=ru-RU"},{"localeId":"zh_Hans_CN","location":"?lang=zh-Hans-CN"},{"localeId":"zh_Hant_TW","location":"?lang=zh-Hant-TW"}],"isWebTransitionReloadPage":false,"locales":[{"id":"ar_AE","displayName":"العربية","platformLocale":"ar-AE","additionalProperties":[{"key":"direction","value":"rtl"}]},{"id":"en_US","displayName":"English","platformLocale":"en-US","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"ru_RU","displayName":"русский","platformLocale":"ru-RU","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hans_CN","displayName":"简体中文 (中国)","platformLocale":"zh-Hans-CN","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hant_TW","displayName":"繁體中文 (台灣)","platformLocale":"zh-Hant-TW","additionalProperties":[{"key":"direction","value":"ltr"}]}],"css":".oswidget-dropdown-language-current-selection,.oswidget-dropdown-language-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-language{position:relative;display:inline-block}.oswidget-dropdown-language-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-language-current-selection-name{width:150px}.oswidget-dropdown-language-arrow{float:right}.oswidget-dropdown-language-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-language-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language:hover .oswidget-dropdown-language-content{display:block;background-color:#fafafa}.oswidget-dropdown-language:hover .oswidget-dropdown-language-button{color:#00a4bd}.oswidget-dropdown-language-rtl{position:relative;display:inline-block}.oswidget-dropdown-language-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-language-current-selection-name-rtl{width:150px}.oswidget-dropdown-language-arrow-rtl{float:left}.oswidget-dropdown-language-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-language-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-button-rtl{color:#00a4bd}"}];
+    window.OsSelectors = [{"type":"display-language","htmlTag":"language-selector","theme":"general","options":["ar_AE","en_US","ru_RU","zh_Hans_CN","zh_Hant_TW"],"defaultValue":"en_US","respectOrder":["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"ar_AE","location":"?lang=ar-AE"},{"localeId":"en_US","location":"?lang=en-US"},{"localeId":"ru_RU","location":"?lang=ru-RU"},{"localeId":"zh_Hans_CN","location":"?lang=zh-Hans-CN"},{"localeId":"zh_Hant_TW","location":"?lang=zh-Hant-TW"}],"isWebTransitionReloadPage":false,"locales":[{"id":"ar_AE","displayName":"العربية","platformLocale":"ar-AE","additionalProperties":[{"key":"direction","value":"rtl"}]},{"id":"en_US","displayName":"English","platformLocale":"en-US","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"ru_RU","displayName":"русский","platformLocale":"ru-RU","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hans_CN","displayName":"简体中文 (中国)","platformLocale":"zh-Hans-CN","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hant_TW","displayName":"繁體中文 (台灣)","platformLocale":"zh-Hant-TW","additionalProperties":[{"key":"direction","value":"ltr"}]}],"css":".oswidget-dropdown-language-current-selection,.oswidget-dropdown-language-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-language{position:relative;display:inline-block}.oswidget-dropdown-language-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-language-current-selection-name{width:150px}.oswidget-dropdown-language-arrow{float:right}.oswidget-dropdown-language-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-language-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language:hover .oswidget-dropdown-language-content{display:block;background-color:#fafafa}.oswidget-dropdown-language:hover .oswidget-dropdown-language-button{color:#00a4bd}.oswidget-dropdown-language-rtl{position:relative;display:inline-block}.oswidget-dropdown-language-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-language-current-selection-name-rtl{width:150px}.oswidget-dropdown-language-arrow-rtl{float:left}.oswidget-dropdown-language-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-language-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-button-rtl{color:#00a4bd}"},{"type":"display-region","htmlTag":"region-selector","theme":"general","options":["CN","JP","TW","US","RU"],"defaultValue":"US","respectOrder":["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"CN","location":"?region=CN"},{"localeId":"JP","location":"?region=JP"},{"localeId":"TW","location":"?region=TW"},{"localeId":"US","location":"?region=US"},{"localeId":"AE","location":"?region=AE"},{"localeId":"RU","location":"?region=RU"}],"isWebTransitionReloadPage":true,"locales":[{"id":"AE","displayName":"United Arab Emirates","regionLanguages":[],"platformLocale":"AE"},{"id":"CN","displayName":"China","regionLanguages":[],"platformLocale":"CN"},{"id":"JP","displayName":"Japan","regionLanguages":[],"platformLocale":"JP"},{"id":"RU","displayName":"Russia","regionLanguages":[],"platformLocale":"RU"},{"id":"TW","displayName":"Taiwan","regionLanguages":[],"platformLocale":"TW"},{"id":"US","displayName":"United States","regionLanguages":[],"platformLocale":"US"}],"css":".oswidget-dropdown-region-current-selection,.oswidget-dropdown-region-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-region{position:relative;display:inline-block}.oswidget-dropdown-region-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-region-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-region-current-selection-name{width:150px}.oswidget-dropdown-region-arrow{float:right}.oswidget-dropdown-region-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-region-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-region-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-region:hover .oswidget-dropdown-region-content{display:block;background-color:#fafafa}.oswidget-dropdown-region:hover .oswidget-dropdown-region-button{color:#00a4bd}.oswidget-dropdown-region-rtl{position:relative;display:inline-block}.oswidget-dropdown-region-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-region-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-region-current-selection-name-rtl{width:150px}.oswidget-dropdown-region-arrow-rtl{float:left}.oswidget-dropdown-region-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-region-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-region-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-region-rtl:hover .oswidget-dropdown-region-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-region-rtl:hover .oswidget-dropdown-region-button-rtl{color:#00a4bd}"}];
     console.log("Keep this placeholder mark for selectors code generation: end");
     // End code-gen: Selector of app rule
 
@@ -20,6 +20,8 @@
             });
         },
 
+        // when a locale preference is located a few clicks away and the app manipulates the dom after DOMContentLoaded event is fired
+        // this fixes the dom event listener fires the DOMContentLoaded event before the document is loaded
         replace: function () {
             OsWidget.initWithUrl('display-language');
             OsWidget.initWithUrl('display-region');
@@ -34,34 +36,43 @@
                 OsWidget.getUrlQueryLocaleFromMappedLocation(experienceType) ||
                 OsWidget.getUrlPathLocaleFromMappedLocation(experienceType) ||
                 OsWidget.getUrlHostnameLocaleFromMappedLocation(experienceType);
+
+            var targetLocales = [];
+
             if (localeId) {
 
                 var targetLocale = null;
 
                 var matchedOption = OsSelectors.find(function (selector) {
-                    // the displayLanguageFromUrl is platform locale, we need to convert it to locale id for matching
-                    targetLocale = selector.locales.find(function (locale) {
-                        return locale.platformLocale == localeId;
-                    });
-                    if (targetLocale) {
-                        return selector.options.includes(targetLocale.id);
-                    }
-                    else {
-                        console.warn('Platform locale ' + localeId + ' not found.');
+                    
+                    if (selector.type == experienceType) {
+                        // the displayLanguageFromUrl is platform locale, we need to convert it to locale id for matching
+                        targetLocale = selector.locales.find(function (locale) {
+                            return locale.platformLocale == localeId;
+                        });
+
+                        if (targetLocale) {
+                            return selector.options.includes(targetLocale.id);
+                        }
+                        else {
+                            console.warn('Platform locale ' + localeId + ' not found for the type ' + experienceType + '.');
+                        }
                     }
                 });
 
                 // extracted options from URL is valid
                 if (matchedOption) {
-                    // render the selecto with the locale value extracted from URL
-                    OsWidget.render(experienceType, [targetLocale.id]);
+                    targetLocales.push(targetLocale.id);
 
-                    // remove the display-language loader to skip display-language rendering below
+                    // remove the current type loader so that it won't be called to override the preference from URL
                     OsWidget.loaders = OsWidget.loaders.filter(function (loaderObject) {
                         return loaderObject.type !== experienceType;
                     });
                 }
             }
+
+            // render the selector with the locale value extracted from URL. Even there has no locale matches on URL, the selector will still being rendered
+            OsWidget.render(experienceType, targetLocales);
         },
 
         // to be itereated when init
