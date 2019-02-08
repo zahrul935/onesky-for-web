@@ -32,3 +32,26 @@ To add string files transfer in the process, in `package.json`, modify `scripts"
   }
 }
 ```
+
+## Run
+Under the folder `onesky-for-web/examples/vue-example-app`:
+
+### npm
+If you use npm, run the following commands to engage the app localization flow:
+```
+# install
+npm install
+
+# run on local machine
+npm start
+```
+
+### yarn
+If you use yarn, run the following commands to engage the app localization flow:
+```
+# install
+yarn
+
+# run on local machine
+yarn run start
+```
