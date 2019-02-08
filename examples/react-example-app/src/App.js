@@ -14,9 +14,9 @@ class App extends Component {
 
   componentDidMount() {
     window.onesky.identifiedUser = {
-      id: 'some_id',
-      name: 'Some name',
-      email: 'some_email@someemailserver.com'
+      id: 'identified-user-react-example',
+      name: 'John Doe',
+      email: 'identified-user-react-example@gmail.com'
     }
     window.OsWidget.replace();
     this.loadLocalizedContents();

@@ -142,15 +142,6 @@
                         }
                         else {
                             OsWidget.rewriteParameteredUrlWithoutRefresh(parameter, targetPlatformLocale);
-                            OsWidget.init();
-                            if (selector.type === 'display-language' && selector.isOnlineExtractString) {
-                                if (selector.defaultValue !== targetLocale.id) {
-                                    OsWidget.webTranslation(targetLocale.id);
-                                }
-                                else {
-                                    OsWidget.rollbackToOriginalText(selector.defaultValue);
-                                }
-                            }
                         }
                     }
                     else if (isHostnameLocation) {
@@ -166,12 +157,6 @@
                         }
                         else {
                             OsWidget.rewritePathUrlWithoutRefresh(mappedTransition.location + urlPathObject.fileName);
-                            OsWidget.init();
-                            if (selector.type === 'display-language' && selector.isOnlineExtractString) {
-                                if (selector.defaultValue !== targetLocale.id) {
-                                    OsWidget.webTranslation(targetLocale.id);
-                                }
-                            }
                         }
                     }
                 }
@@ -321,6 +306,7 @@
         rewriteParameteredUrlWithoutRefresh: function (parameterName, parameterValue) {
             var url = OsWidget.urlGetAddedParameter(location.href, parameterName, parameterValue);
             window.history.replaceState({}, 'title', url);
+            OsWidget.replace();
         },
 
         rewritePathUrlWithRefresh: function (path) {
@@ -331,6 +317,7 @@
             var locationSplit = location.href.split(location.pathname);
             var url = locationSplit[0] + path + locationSplit[1];
             window.history.replaceState({}, 'title', url);
+            OsWidget.replace();
         }
     },
 
