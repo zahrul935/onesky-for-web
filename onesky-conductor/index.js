@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-const sdkVersion = '1.0.12';
+const sdkVersion = '1.0.16';
 
 program
   .version(sdkVersion)
