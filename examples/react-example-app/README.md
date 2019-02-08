@@ -37,7 +37,13 @@ npm i --save onesky-conductor
 ```
 
 ### Adjust your npm-scripts
-To add string files transfer in the process, in `package.json`, modify `scripts` to:
+Define environment variables `ONESKY_APP_ID` and `ONESKY_API_KEY` under your project environment, for example,
+```
+export ONESKY_APP_ID=aa339d82-7365-406b-af92-f3d1f4c77651
+export ONESKY_API_KEY=291878c9b5de3fbdf7bedff8570c3d68
+```
+
+Then add string files transfer in the process, in `package.json`, modify `scripts` to:
 
 ```
 {
