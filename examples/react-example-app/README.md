@@ -25,7 +25,7 @@ The above code snippets are from our demo app. Please replace the `script src` a
 The HTML tag `<language-selector></language-selector>` is the location where the localization effect selector rendered. You can adjust it's position by placing it inside lines of HTML code.
 
 
-## Build
+## Build script
 We support string files transfer, this takes place before app building process. In OneSky for Web, we achieve it with [onesky-conductor](https://www.npmjs.com/package/onesky-conductor).
 
 ### Introduce onesky-conductor into your dev and build process
@@ -50,7 +50,24 @@ To add string files transfer in the process, in `package.json`, modify `scripts`
 ```
 
 ## Run
+Under the folder `onesky-for-web/examples/react-example-app`:
+
+### npm
+If you use npm, run the following commands to engage the app localization flow:
 ```
-  yarn
-  yarn run start
+# install
+npm install
+
+# run on local machine
+npm start
+```
+
+### yarn
+If you use yarn, run the following commands to engage the app localization flow:
+```
+# install
+yarn
+
+# run on local machine
+yarn run start
 ```
