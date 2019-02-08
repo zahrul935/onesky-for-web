@@ -15,7 +15,7 @@ const request = require('request');
 const fs = require('fs');
 
 const apiInvokeUrl = 'https://app-api.onesky.app/v1';
-const platformId = 'web-spa';
+const platformId = 'web';
 
 request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization': `Bearer ${program.apiKey}`, 'Platform': `${platformId}`, 'SDK-Version': `${sdkVersion}`}}, (err, res, body) => {
 
@@ -65,7 +65,13 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
                            * Response must be exist and response status code must be 200
                            */
                           if (!res || res.statusCode !== 200) {
-                              throw new Error(`Response must be exist and response status code must be 200`);
+                              if (body) {
+                                var firstErrorObject = JSON.parse(body).errors[0];
+                                throw new Error(firstErrorObject.message);
+                              }
+                              else {
+                                throw new Error(`Response body must be exist and response status code must be 200`);
+                              }
                           }
 
                           /**
@@ -86,11 +92,14 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
                         /**
                          * Statements that are executed if an exception is thrown in the try block.
                          */
-                        if (e.message === "Response body must be exist") {
+                        if (e.message.indexOf("Response body must be exist") > -1) {
                             console.warn('\x1b[33m%s\x1b[0m', `String file of language id '${locale.id}' does not exist.`);
                         }
+                        else if (e.message.indexOf("conductor plan") > -1) {
+                            console.error('\x1b[1;31m%s\x1b[0m', `${e.message}`);
+                        }
                         else {
-                            throw new Error(`${e.name + ":" + e.message + "\n" + e.stack}`);
+                            throw new Error(`${e.message + "\n" + e.stack}`);
                         }
                     }
                 });
