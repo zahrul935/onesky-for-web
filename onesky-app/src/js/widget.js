@@ -136,13 +136,7 @@
                         // query
                         var parameter = queryComponents[0];
                         parameter = parameter.replace('?', '').replace('&', '');
-
-                        if (selector.isWebTransitionReloadPage) {
-                            OsWidget.rewriteParameteredUrlWithRefresh(parameter, targetPlatformLocale);
-                        }
-                        else {
-                            OsWidget.rewriteParameteredUrlWithoutRefresh(parameter, targetPlatformLocale);
-                        }
+                        OsWidget.rewriteParameteredUrlWithRefresh(parameter, targetPlatformLocale);
                     }
                     else if (isHostnameLocation) {
                         // hostname changes must need reload
@@ -151,13 +145,7 @@
                     else {
                         // path
                         var urlPathObject = OsWidget.getUrlPathObject(window.location.pathname);
-
-                        if (selector.isWebTransitionReloadPage) {
-                            OsWidget.rewritePathUrlWithRefresh(mappedTransition.location + urlPathObject.fileName);
-                        }
-                        else {
-                            OsWidget.rewritePathUrlWithoutRefresh(mappedTransition.location + urlPathObject.fileName);
-                        }
+                        OsWidget.rewritePathUrlWithRefresh(mappedTransition.location + urlPathObject.fileName);
                     }
                 }
                 else {
