@@ -306,7 +306,7 @@
         rewriteParameteredUrlWithoutRefresh: function (parameterName, parameterValue) {
             var url = OsWidget.urlGetAddedParameter(location.href, parameterName, parameterValue);
             window.history.replaceState({}, 'title', url);
-            OsWidget.replace();
+            OsWidget.init();
         },
 
         rewritePathUrlWithRefresh: function (path) {
@@ -317,7 +317,7 @@
             var locationSplit = location.href.split(location.pathname);
             var url = locationSplit[0] + path + locationSplit[1];
             window.history.replaceState({}, 'title', url);
-            OsWidget.replace();
+            OsWidget.init();
         }
     },
 
