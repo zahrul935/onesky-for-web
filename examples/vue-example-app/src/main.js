@@ -4,7 +4,7 @@ import App from './App.vue'
 import vueCustomElement from 'vue-custom-element'
 import http from "axios"
 
-const oneskyAppId = "f99ea11d-4a9a-45dc-a226-611efcc024c2"
+const oneskyAppId = "aa339d82-7365-406b-af92-f3d1f4c77651"
 const oneskyCookieKeyPrefix = "os_display-language_";
 const urlLocaleKey = "lang"
 
@@ -17,10 +17,13 @@ loadLocalizedContents(function(i18n) {
     });
 });
 
-// Enable adding html tag for language selector
+// Enable adding html tag for locale selectors
 function loadLocaleSelector() {
   Vue.use(vueCustomElement)
   Vue.customElement('language-selector', {
+      render: h => h()
+  });
+  Vue.customElement('region-selector', {
       render: h => h()
   });
 
@@ -39,7 +42,7 @@ function loadLocaleSelector() {
 // Setup i18n and load content
 function loadLocalizedContents(callback) {
   const url = new URL(location.href);
-  const currentLocale = url.searchParams.get(urlLocaleKey) || 'en';
+  const currentLocale = url.searchParams.get(urlLocaleKey) || 'en-US';
 
   http.get(`locales/${currentLocale}.json`)
     .then(res => {
