@@ -1,6 +1,6 @@
 {
   "name": "onesky-conductor",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "OneSky Conductor",
   "main": "index.js",
   "private": false,

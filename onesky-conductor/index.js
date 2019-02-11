@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-const sdkVersion = '1.0.16';
+const sdkVersion = '1.0.17';
 
 program
   .version(sdkVersion)
@@ -20,18 +20,12 @@ const platformId = 'web';
 request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization': `Bearer ${program.apiKey}`, 'Platform': `${platformId}`, 'SDK-Version': `${sdkVersion}`}}, (err, res, body) => {
 
     try {
-        /**
-         * Response must be exist and response status code must be 200
-         */
-        if (!res || res.statusCode !== 200) {
-            throw new Error(`Response must be exist and response status code must be 200`);
-        }
 
         /**
          * Response body must be exist
          */
         if (!body) {
-            throw new Error('No response body found.');
+            throw new Error('Internal error. Please contact support@onesky.app');
         }
 
         /**
@@ -39,11 +33,25 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
          */
         body = JSON.parse(body);
 
+        /**
+         * 1st API call response handler, to check authority
+         * Response must be exist and response status code must be 200
+         */
+        if (!res || res.statusCode !== 200) {
+            var firstError = body.errors[0];
+            if (firstError) {
+              if (firstError.message.indexOf("Unauthorized") > -1) {
+                console.error('\x1b[1;31m%s\x1b[0m', `Unauthorized access. Please check your app ID and API key`);
+              }
+              throw new Error(firstError.message);
+            }
+        }
+
     } catch (e) {
         /**
          * Statements that are executed if an exception is thrown in the try block.
          */
-        throw new Error(`${e.name + ":" + e.message + "\n" + e.stack}`);
+        throw new Error(`${e.message + "\n" + e.stack}`);
     }
 
     if (body.app.selectors) {
@@ -54,7 +62,7 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
             if (selector.type !== 'display-language') return;
 
             selector.locales.map(locale => {
-                request({url: `${apiInvokeUrl}/apps/${program.appId}/string-files?languageId=${locale.id}&fileFormat=${program.fileFormat}`, headers:{'Authorization': `Bearer ${program.apiKey}`}}, (err, res, body) => {
+                request({url: `${apiInvokeUrl}/apps/${program.appId}/string-files?languageId=${locale.id}&fileFormat=${program.fileFormat}`, headers:{'Authorization': `Bearer ${program.apiKey}`}}, (err, res, stringFileContent) => {
                     try {
 
                         /**
@@ -62,45 +70,39 @@ request({url: `${apiInvokeUrl}/apps/${program.appId}`, headers:{'Authorization':
                         */
                         if (selector.type === 'display-language') {
                           /**
+                           * 2st API call response handler, to check plan subscription
                            * Response must be exist and response status code must be 200
                            */
                           if (!res || res.statusCode !== 200) {
-                              if (body) {
-                                var firstErrorObject = JSON.parse(body).errors[0];
-                                throw new Error(firstErrorObject.message);
+                            var firstError = stringFileContent.errors[0];
+                            if (firstError) {
+                              if (firstError.message.indexOf("conductor plan") > -1) {
+                                console.error('\x1b[1;31m%s\x1b[0m', `${firstError.message}`);
                               }
-                              else {
-                                throw new Error(`Response body must be exist and response status code must be 200`);
-                              }
-                          }
 
-                          /**
-                           * Response body must be exist
-                           */
-                          if (!body) {
-                              throw new Error('Response body must be exist');
-                          }
+                              throw new Error(firstError.message);
+                            }
+                          } else {
+                            /**
+                             * If success response without content, it means there has no strings for that locale
+                             */
+                            if (!stringFileContent) {
+                              console.warn('\x1b[33m%s\x1b[0m', `String file of language id '${locale.id}' does not exist.`);
+                            }
 
                             /**
                              * Create string files
                              */
                             const fileExtension = program.fileFormat.split('-').pop();
-                            saveFile(program.stringFilePath, `${locale.platformLocale}.${fileExtension}`, body);
+                            saveFile(program.stringFilePath, `${locale.platformLocale}.${fileExtension}`, stringFileContent);
+                          }
                         }
 
                     } catch (e) {
                         /**
                          * Statements that are executed if an exception is thrown in the try block.
                          */
-                        if (e.message.indexOf("Response body must be exist") > -1) {
-                            console.warn('\x1b[33m%s\x1b[0m', `String file of language id '${locale.id}' does not exist.`);
-                        }
-                        else if (e.message.indexOf("conductor plan") > -1) {
-                            console.error('\x1b[1;31m%s\x1b[0m', `${e.message}`);
-                        }
-                        else {
-                            throw new Error(`${e.message + "\n" + e.stack}`);
-                        }
+                        throw new Error(`${e.message + "\n" + e.stack}`);
                     }
                 });
             });
