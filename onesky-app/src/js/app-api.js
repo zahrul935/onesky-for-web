@@ -78,62 +78,62 @@ var OsAppApi = (function () {
             this.authToken = typeof authToken !== 'undefined' ? authToken : null;
         },
 
-        this.get = function(endpoint, callback) {
-            var httpRequest = new XMLHttpRequest();
-            httpRequest.onreadystatechange = function() {
-                if (httpRequest.readyState == 4) {
-                    if (httpRequest.status == 200) {
-                        try {
-                            return callback(JSON.parse(httpRequest.responseText));
-                        } catch(err) {
-                            console.error("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
-                            console.error(err);
+            this.get = function(endpoint, callback) {
+                var httpRequest = new XMLHttpRequest();
+                httpRequest.onreadystatechange = function() {
+                    if (httpRequest.readyState == 4) {
+                        if (httpRequest.status == 200) {
+                            try {
+                                return callback(JSON.parse(httpRequest.responseText));
+                            } catch(err) {
+                                console.error("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
+                                console.error(err);
+                                return callback(null);
+                            }
+                        }
+                        else{
                             return callback(null);
                         }
                     }
-                    else{
-                        return callback(null);
-                    }
                 }
-            }
-            httpRequest.open("GET", this.apiUrl + endpoint, true);
-            if (this.authToken) {
-                httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
-            }
-            httpRequest.setRequestHeader("Authorization", "Bearer " + apiKey);
-            httpRequest.setRequestHeader("Platform", "web-basicjs");
-            httpRequest.setRequestHeader("Sdk-Version", "cdn");
-            httpRequest.send(null);
-        },
+                httpRequest.open("GET", this.apiUrl + endpoint, true);
+                if (this.authToken) {
+                    httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
+                }
+                httpRequest.setRequestHeader("Authorization", "Bearer " + apiKey);
+                httpRequest.setRequestHeader("Platform", "web-basicjs");
+                httpRequest.setRequestHeader("Sdk-Version", "cdn");
+                httpRequest.send(null);
+            },
 
-        this.post = function(endpoint, body, callback) {
-            var httpRequest = new XMLHttpRequest();
-            httpRequest.onreadystatechange = function() {
-                if (httpRequest.readyState == 4) {
-                    if (httpRequest.status == 200) {
-                        try {
-                            return callback(JSON.parse(httpRequest.responseText));
-                        } catch(err) {
-                            console.error("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
-                            console.error(err);
-                            return callback(httpRequest.responseText);
+            this.post = function(endpoint, body, callback) {
+                var httpRequest = new XMLHttpRequest();
+                httpRequest.onreadystatechange = function() {
+                    if (httpRequest.readyState == 4) {
+                        if (httpRequest.status == 200) {
+                            try {
+                                return callback(JSON.parse(httpRequest.responseText));
+                            } catch(err) {
+                                console.error("Error when calling endpoint " + endpoint + ", responsed: " + httpRequest.responseText);
+                                console.error(err);
+                                return callback(httpRequest.responseText);
+                            }
+                        }
+                        else{
+                            return callback(null);
                         }
                     }
-                    else{
-                        return callback(null);
-                    }
                 }
+                httpRequest.open("POST", this.apiUrl + endpoint, true);
+                httpRequest.setRequestHeader("Content-Type", "application/json");
+                if (this.authToken) {
+                    httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
+                }
+                httpRequest.setRequestHeader("Authorization", "Bearer " + apiKey);
+                httpRequest.setRequestHeader("Platform", "web-basicjs");
+                httpRequest.setRequestHeader("Sdk-Version", "cdn");
+                httpRequest.send(body);
             }
-            httpRequest.open("POST", this.apiUrl + endpoint, true);
-            httpRequest.setRequestHeader("Content-Type", "application/json");
-            if (this.authToken) {
-                httpRequest.setRequestHeader("User-Hash", "Bearer " + this.authToken);
-            }
-            httpRequest.setRequestHeader("Authorization", "Bearer " + apiKey);
-            httpRequest.setRequestHeader("Platform", "web-basicjs");
-            httpRequest.setRequestHeader("Sdk-Version", "cdn");
-            httpRequest.send(body);
-        }
     };
 
     var getAppSelectorsByAppId = function(apiKey, appId, displayLanguageId, callback) {
@@ -159,8 +159,8 @@ var OsAppApi = (function () {
 
     var readPreferenceValues = function(apiKey, appId, user, experienceType, respectOrder, fallbackValue, callback) {
 
-        var isAutoDetectionEnabled = respectOrder.includes('auto-detection');
-        var isAutoDetectionFirst = respectOrder[0] === 'auto-detection';
+        var isAutoDetectionEnabled = respectOrder? respectOrder.includes('auto-detection'): false;
+        var isAutoDetectionFirst = respectOrder? respectOrder[0] === 'auto-detection': false;
 
         if (isAutoDetectionFirst) {
             // detect local setting first
@@ -344,7 +344,7 @@ var OsAppApi = (function () {
  */
 (function (OsAppApi) {
 
-    var _experienceType = 'interested-regions';
+    var _experienceType = 'understood-languages';
 
     OsAppApi.loadUserUnderstoodLanguages = function(apiKey, appId, user, appSelector, callback){
         OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){

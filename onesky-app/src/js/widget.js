@@ -471,12 +471,12 @@
     var _generalStyleElement = function (preferencedLocale, directionStyle) {
         // Create "general" dropdown with on-click event listener
         /** Sample in HTML
-            <select>
-                <option>Language 1</option>
-                <option>Language 2</option>
-                <option>Language 3</option>
-            </select>
-        */
+         <select>
+         <option>Language 1</option>
+         <option>Language 2</option>
+         <option>Language 3</option>
+         </select>
+         */
 
         var selectElement = document.createElement('select');
         selectElement.addEventListener('change', _onClicked);
@@ -511,20 +511,20 @@
     var _nonGeneralStyleElement = function (preferencedLocale, directionStyle) {
         // Create "non-general" dropdown with on-click event listener
         /** Sample in HTML
-            <div class="oswidget-dropdown-language">
-              <button class="oswidget-dropdown-language-button">
-                <div class="oswidget-dropdown-language-current-selection">
-                    <span class="oswidget-dropdown-language-current-selection-name">
-                    <div class="oswidget-dropdown-language-arrow">&#x25BE;</div>
-                </div>
-                <div class="oswidget-dropdown-language-content">
-                  <a>Language 1</a>
-                  <a>Language 2</a>
-                  <a>Language 3</a>
-                </div>
-              </button>
-            </div>
-        */
+         <div class="oswidget-dropdown-language">
+         <button class="oswidget-dropdown-language-button">
+         <div class="oswidget-dropdown-language-current-selection">
+         <span class="oswidget-dropdown-language-current-selection-name">
+         <div class="oswidget-dropdown-language-arrow">&#x25BE;</div>
+         </div>
+         <div class="oswidget-dropdown-language-content">
+         <a>Language 1</a>
+         <a>Language 2</a>
+         <a>Language 3</a>
+         </div>
+         </button>
+         </div>
+         */
         var dropdownElement = document.createElement('div');
         dropdownElement.className = 'oswidget-dropdown-language' + directionStyle;
 
@@ -711,9 +711,9 @@
         // Create "general" dropdown with on-click event listener
         /** Sample in HTML
          <select>
-            <option>Region 1</option>
-            <option>Region 2</option>
-            <option>Region 3</option>
+         <option>Region 1</option>
+         <option>Region 2</option>
+         <option>Region 3</option>
          </select>
          */
 
@@ -751,17 +751,17 @@
         // Create "non-general" dropdown with on-click event listener
         /** Sample in HTML
          <div class="oswidget-dropdown-region">
-            <button class="oswidget-dropdown-region-button">
-                <div class="oswidget-dropdown-region-current-selection">
-                    <span class="oswidget-dropdown-region-current-selection-name">
-                    <div class="oswidget-dropdown-region-arrow">&#x25BE;</div>
-                    </div>
-                    <div class="oswidget-dropdown-region-content">
-                    <a>Region 1</a>
-                    <a>Region 2</a>
-                    <a>Region 3</a>
-                </div>
-            </button>
+         <button class="oswidget-dropdown-region-button">
+         <div class="oswidget-dropdown-region-current-selection">
+         <span class="oswidget-dropdown-region-current-selection-name">
+         <div class="oswidget-dropdown-region-arrow">&#x25BE;</div>
+         </div>
+         <div class="oswidget-dropdown-region-content">
+         <a>Region 1</a>
+         <a>Region 2</a>
+         <a>Region 3</a>
+         </div>
+         </button>
          </div>
          */
         var dropdownElement = document.createElement('div');
@@ -891,25 +891,25 @@
         // Create "general" dropdown with on-click event listener
         /** Sample in HTML
          <form>
-            <div class="oswidget-interested-regions-multi-select-checkbox">
-               <div class="oswidget-interested-regions-select-option"">
-                   <select>
-                       <option>Select an option</option>
-                   </select>
-                   <div class="oswidget-interested-regions-select-bg"></div>
-               </div>
-               <div id="oswidget-interested-regions">
-                   <label for="US">
-                       <input type="checkbox" id="US" name="oswidget-interested-regions"/>US
-                   </label>
-                   <label for="HK">
-                       <input type="checkbox" id="HK" name="oswidget-interested-regions" />HK
-                   </label>
-                   <label for="TH">
-                       <input type="checkbox" id="TH" name="oswidget-interested-regions" />TH
-                   </label>
-               </div>
-            </div>
+         <div class="oswidget-interested-regions-multi-select-checkbox">
+         <div class="oswidget-interested-regions-select-option"">
+         <select>
+         <option>Select an option</option>
+         </select>
+         <div class="oswidget-interested-regions-select-bg"></div>
+         </div>
+         <div id="oswidget-interested-regions">
+         <label for="US">
+         <input type="checkbox" id="US" name="oswidget-interested-regions"/>US
+         </label>
+         <label for="HK">
+         <input type="checkbox" id="HK" name="oswidget-interested-regions" />HK
+         </label>
+         <label for="TH">
+         <input type="checkbox" id="TH" name="oswidget-interested-regions" />TH
+         </label>
+         </div>
+         </div>
          </form>
          */
 
