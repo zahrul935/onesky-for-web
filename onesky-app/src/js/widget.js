@@ -938,7 +938,7 @@
             var labelText = document.createTextNode(optionLocale.displayName);
             label.appendChild(labelText);
 
-            let optionLocaleSelected = preferencedLocales.find(function (preferencedLocale) {
+            var optionLocaleSelected = preferencedLocales.find(function (preferencedLocale) {
                 return optionLocale.platformLocale == preferencedLocale.platformLocale;
             });
             if (optionLocaleSelected) {
@@ -1156,7 +1156,7 @@
             var labelText = document.createTextNode(optionLocale.displayName);
             label.appendChild(labelText);
 
-            let optionLocaleSelected = preferencedLocales.find(function (preferencedLocale) {
+            var optionLocaleSelected = preferencedLocales.find(function (preferencedLocale) {
                 return optionLocale.platformLocale == preferencedLocale.platformLocale;
             });
             if (optionLocaleSelected) {
