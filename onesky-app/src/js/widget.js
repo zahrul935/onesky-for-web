@@ -2,7 +2,7 @@
 
     // Begin code-gen: Selector of app rule
     console.log("Keep this placeholder mark for selectors code generation: begin");
-    window.OsSelectors = [{"type":"display-language","htmlTag":"language-selector","theme":"general","options":["ar_AE","en_US","ru_RU","zh_Hans_CN","zh_Hant_TW"],"defaultValue":"en_US","respectOrder":["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"ar_AE","location":"?lang=ar-AE"},{"localeId":"en_US","location":"?lang=en-US"},{"localeId":"ru_RU","location":"?lang=ru-RU"},{"localeId":"zh_Hans_CN","location":"?lang=zh-Hans-CN"},{"localeId":"zh_Hant_TW","location":"?lang=zh-Hant-TW"}],"isWebTransitionReloadPage":false,"locales":[{"id":"ar_AE","displayName":"العربية","platformLocale":"ar-AE","additionalProperties":[{"key":"direction","value":"rtl"}]},{"id":"en_US","displayName":"English","platformLocale":"en-US","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"ru_RU","displayName":"русский","platformLocale":"ru-RU","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hans_CN","displayName":"简体中文 (中国)","platformLocale":"zh-Hans-CN","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hant_TW","displayName":"繁體中文 (台灣)","platformLocale":"zh-Hant-TW","additionalProperties":[{"key":"direction","value":"ltr"}]}],"css":".oswidget-dropdown-language-current-selection,.oswidget-dropdown-language-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-language{position:relative;display:inline-block}.oswidget-dropdown-language-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-language-current-selection-name{width:150px}.oswidget-dropdown-language-arrow{float:right}.oswidget-dropdown-language-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-language-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language:hover .oswidget-dropdown-language-content{display:block;background-color:#fafafa}.oswidget-dropdown-language:hover .oswidget-dropdown-language-button{color:#00a4bd}.oswidget-dropdown-language-rtl{position:relative;display:inline-block}.oswidget-dropdown-language-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-language-current-selection-name-rtl{width:150px}.oswidget-dropdown-language-arrow-rtl{float:left}.oswidget-dropdown-language-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-language-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-button-rtl{color:#00a4bd}"},{"type":"display-region","htmlTag":"region-selector","theme":"general","options":["CN","JP","TW","US","RU"],"defaultValue":"US","respectOrder":["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"CN","location":"?region=CN"},{"localeId":"JP","location":"?region=JP"},{"localeId":"TW","location":"?region=TW"},{"localeId":"US","location":"?region=US"},{"localeId":"AE","location":"?region=AE"},{"localeId":"RU","location":"?region=RU"}],"isWebTransitionReloadPage":true,"locales":[{"id":"AE","displayName":"United Arab Emirates","regionLanguages":[],"platformLocale":"AE"},{"id":"CN","displayName":"China","regionLanguages":[],"platformLocale":"CN"},{"id":"JP","displayName":"Japan","regionLanguages":[],"platformLocale":"JP"},{"id":"RU","displayName":"Russia","regionLanguages":[],"platformLocale":"RU"},{"id":"TW","displayName":"Taiwan","regionLanguages":[],"platformLocale":"TW"},{"id":"US","displayName":"United States","regionLanguages":[],"platformLocale":"US"}],"css":".oswidget-dropdown-region-current-selection,.oswidget-dropdown-region-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-region{position:relative;display:inline-block}.oswidget-dropdown-region-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-region-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-region-current-selection-name{width:150px}.oswidget-dropdown-region-arrow{float:right}.oswidget-dropdown-region-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-region-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-region-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-region:hover .oswidget-dropdown-region-content{display:block;background-color:#fafafa}.oswidget-dropdown-region:hover .oswidget-dropdown-region-button{color:#00a4bd}.oswidget-dropdown-region-rtl{position:relative;display:inline-block}.oswidget-dropdown-region-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-region-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-region-current-selection-name-rtl{width:150px}.oswidget-dropdown-region-arrow-rtl{float:left}.oswidget-dropdown-region-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-region-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-region-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-region-rtl:hover .oswidget-dropdown-region-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-region-rtl:hover .oswidget-dropdown-region-button-rtl{color:#00a4bd}"}];
+    window.OsSelectors = [{"type":"display-language","htmlTag":"language-selector","theme":"general","options":["ar_AE","en_US","ru_RU","zh_Hans_CN","zh_Hant_TW"],"defaultValue":"en_US","respectOrder":["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"ar_AE","location":"?lang=ar-AE"},{"localeId":"en_US","location":"?lang=en-US"}, {"localeId":"ru_RU","location":"?lang=ru-RU"},{"localeId":"zh_Hans_CN","location":"?lang=zh-Hans-CN"},{"localeId":"zh_Hant_TW","location":"?lang=zh-Hant-TW"}], "isWebTransitionReloadPage":false,"locales":[{"id":"ar_AE","displayName":"العربية","platformLocale":"ar-AE","additionalProperties":[{"key":"direction","value":"rtl"}]}, {"id":"en_US","displayName":"English","platformLocale":"en-US","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"ru_RU","displayName":"русский", "platformLocale":"ru-RU","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hans_CN","displayName":"简体中文 (中国)","platformLocale":"zh-Hans-CN", "additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hant_TW","displayName":"繁體中文 (台灣)","platformLocale":"zh-Hant-TW","additionalProperties": [{"key":"direction","value":"ltr"}]}], "css":".oswidget-dropdown-language-current-selection,.oswidget-dropdown-language-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-language{position:relative;display:inline-block}.oswidget-dropdown-language-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-language-current-selection-name{width:150px}.oswidget-dropdown-language-arrow{float:right}.oswidget-dropdown-language-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-language-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language:hover .oswidget-dropdown-language-content{display:block;background-color:#fafafa}.oswidget-dropdown-language:hover .oswidget-dropdown-language-button{color:#00a4bd}.oswidget-dropdown-language-rtl{position:relative;display:inline-block}.oswidget-dropdown-language-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-language-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-language-current-selection-name-rtl{width:150px}.oswidget-dropdown-language-arrow-rtl{float:left}.oswidget-dropdown-language-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-language-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-language-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-language-rtl:hover .oswidget-dropdown-language-button-rtl{color:#00a4bd}"},{"type":"display-region","htmlTag":"region-selector","theme":"general","options":["CN","JP","TW","US","RU"],"defaultValue":"US","respectOrder": ["user-input","auto-detection"],"webTransitionMappings":[{"localeId":"CN","location":"?region=CN"},{"localeId":"JP","location":"?region=JP"},{"localeId":"TW","location":"?region=TW"}, {"localeId":"US","location":"?region=US"},{"localeId":"AE","location":"?region=AE"},{"localeId":"RU","location":"?region=RU"}],"isWebTransitionReloadPage":true,"locales": [{"id":"AE","displayName":"United Arab Emirates","regionLanguages":[],"platformLocale":"AE"},{"id":"CN","displayName":"China","regionLanguages":[],"platformLocale":"CN"}, {"id":"JP","displayName":"Japan","regionLanguages":[],"platformLocale":"JP"},{"id":"RU","displayName":"Russia","regionLanguages":[],"platformLocale":"RU"},{"id":"TW","displayName": "Taiwan","regionLanguages":[],"platformLocale":"TW"},{"id":"US","displayName":"United States","regionLanguages":[],"platformLocale":"US"}], "css":".oswidget-dropdown-region-current-selection,.oswidget-dropdown-region-current-selection-rtl{background-image:url(https://onesky-locale-widget-web-stag.firebaseapp.com/images/global.png);background-repeat:no-repeat;background-size:19px 19px}.oswidget-dropdown-region{position:relative;display:inline-block}.oswidget-dropdown-region-button{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-region-current-selection{border:1px solid #cacaca;background-color:#fafafa;padding:5px 5px 5px 20px;width:170px;background-position:4px 50%}.oswidget-dropdown-region-current-selection-name{width:150px}.oswidget-dropdown-region-arrow{float:right}.oswidget-dropdown-region-content{display:none;position:absolute;min-width:195px;box-shadow:0 2px 4px 0 rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-region-content a{color:#333;padding:10px 10px 10px 32px;text-decoration:none;text-align:left;display:block}.oswidget-dropdown-region-content a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-region:hover .oswidget-dropdown-region-content{display:block;background-color:#fafafa}.oswidget-dropdown-region:hover .oswidget-dropdown-region-button{color:#00a4bd}.oswidget-dropdown-region-rtl{position:relative;display:inline-block}.oswidget-dropdown-region-button-rtl{padding:0;font-size:13px;border:none;outline:0;cursor:pointer}.oswidget-dropdown-region-current-selection-rtl{border:1px solid #cacaca;background-color:#fafafa;padding:5px 20px 5px 5px;width:170px;background-position:171px 50%}.oswidget-dropdown-region-current-selection-name-rtl{width:150px}.oswidget-dropdown-region-arrow-rtl{float:left}.oswidget-dropdown-region-content-rtl{display:none;position:absolute;min-width:195px;box-shadow:0 0 4px 2px rgba(0,0,0,.2);border:1px solid #cacaca;z-index:99}.oswidget-dropdown-region-content-rtl a{color:#333;padding:10px 32px 10px 10px;text-decoration:none;text-align:right;display:block}.oswidget-dropdown-region-content-rtl a:hover{background-color:#ddd;color:#000}.oswidget-dropdown-region-rtl:hover .oswidget-dropdown-region-content-rtl{display:block;background-color:#fafafa}.oswidget-dropdown-region-rtl:hover .oswidget-dropdown-region-button-rtl{color:#00a4bd}"},{"type":"interested-regions","htmlTag": "interested-regions-selector","theme":"general", "options":["US", "JP", "TW", "RU"],"defaultValue": "US","locales":[{"id":"AE","displayName":"United Arab Emirates","regionLanguages":[],"platformLocale":"AE"},{"id":"CN","displayName":"China","regionLanguages":[],"platformLocale":"CN"}, {"id":"JP","displayName":"Japan","regionLanguages":[],"platformLocale":"JP"},{"id":"RU","displayName":"Russia","regionLanguages":[],"platformLocale":"RU"},{"id":"TW","displayName": "Taiwan","regionLanguages":[],"platformLocale":"TW"},{"id":"US","displayName":"United States","regionLanguages":[],"platformLocale":"US"}], "css":".oswidget-interested-regions-multi-select-checkbox{width:200px}.oswidget-interested-regions-select-option{position:relative}.oswidget-interested-regions-select-option select{width:100%;font-weight:700}.oswidget-interested-regions-select-bg{position:absolute;left:0;right:0;top:0;bottom:0}#oswidget-interested-regions{display:none;border:1px solid #dadada}#oswidget-interested-regions label{display:block;padding:0;font-size:13px}#checkboxes label:hover{background-color:#1e90ff}"},{"type":"understood-languages","htmlTag": "understood-languages-selector","theme":"general", "options":["en_US", "zh_Hant_TW", "ru_RU"],"defaultValue": "en_US","locales":[{"id":"ar_AE","displayName":"العربية","platformLocale":"ar-AE","additionalProperties":[{"key":"direction","value":"rtl"}]}, {"id":"en_US","displayName":"English","platformLocale":"en-US","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"ru_RU","displayName":"русский", "platformLocale":"ru-RU","additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hans_CN","displayName":"简体中文 (中国)","platformLocale":"zh-Hans-CN", "additionalProperties":[{"key":"direction","value":"ltr"}]},{"id":"zh_Hant_TW","displayName":"繁體中文 (台灣)","platformLocale":"zh-Hant-TW","additionalProperties": [{"key":"direction","value":"ltr"}]}], "css":".oswidget-understood-languages-multi-select-checkbox{width:200px}.oswidget-understood-languages-select-option{position:relative}.oswidget-understood-languages-select-option select{width:100%;font-weight:700}.oswidget-understood-languages-select-bg{position:absolute;left:0;right:0;top:0;bottom:0}#oswidget-understood-languages{display:none;border:1px solid #dadada}#oswidget-understood-languages label{display:block;padding:0;font-size:13px}#checkboxes label:hover{background-color:#1e90ff}"}];
     console.log("Keep this placeholder mark for selectors code generation: end");
     // End code-gen: Selector of app rule
 
@@ -14,6 +14,9 @@
             document.addEventListener('DOMContentLoaded', function () {
                 OsWidget.initWithUrl('display-language');
                 OsWidget.initWithUrl('display-region');
+                OsWidget.initWithUrl('interested-regions');
+                OsWidget.initWithUrl('understood-languages');
+
                 OsWidget.loaders.forEach(function (loaderObject) {
                     loaderObject.loader();
                 });
@@ -25,6 +28,8 @@
         replace: function () {
             OsWidget.initWithUrl('display-language');
             OsWidget.initWithUrl('display-region');
+            OsWidget.initWithUrl('interested-regions');
+            OsWidget.initWithUrl('understood-languages');
             OsWidget.loaders.forEach(function (loaderObject) {
                 loaderObject.loader();
             });
@@ -44,7 +49,7 @@
                 var targetLocale = null;
 
                 var matchedOption = OsSelectors.find(function (selector) {
-                    
+
                     if (selector.type == experienceType) {
                         // the displayLanguageFromUrl is platform locale, we need to convert it to locale id for matching
                         targetLocale = selector.locales.find(function (locale) {
@@ -210,7 +215,7 @@
 
             var localeFromUrl = '';
 
-            if (selector) {
+            if (selector && selector.webTransitionMappings) {
                 selector.webTransitionMappings.map(function (mapping) {
                     if (mapping.location == hostname) {
                         localeFromUrl = mapping.localeId;
@@ -232,7 +237,7 @@
 
             var localeFromUrl = '';
 
-            if (selector) {
+            if (selector && selector.webTransitionMappings) {
                 selector.webTransitionMappings.map(function (mapping) {
                     if (mapping.location == urlPathObject.path) {
                         localeFromUrl = mapping.localeId;
@@ -258,7 +263,7 @@
                 return selector.type === experienceType;
             });
 
-            if (selector) {
+            if (selector && selector.webTransitionMappings) {
                 selector.webTransitionMappings.map(function (mapping) {
                     Object.keys(OsWidget.queryStringToJson(mapping.location)).map(function (key) {
                         if (!queryParams.includes(key)) {
@@ -466,12 +471,12 @@
     var _generalStyleElement = function (preferencedLocale, directionStyle) {
         // Create "general" dropdown with on-click event listener
         /** Sample in HTML
-            <select>
-                <option>Language 1</option>
-                <option>Language 2</option>
-                <option>Language 3</option>
-            </select>
-        */
+         <select>
+         <option>Language 1</option>
+         <option>Language 2</option>
+         <option>Language 3</option>
+         </select>
+         */
 
         var selectElement = document.createElement('select');
         selectElement.addEventListener('change', _onClicked);
@@ -506,20 +511,20 @@
     var _nonGeneralStyleElement = function (preferencedLocale, directionStyle) {
         // Create "non-general" dropdown with on-click event listener
         /** Sample in HTML
-            <div class="oswidget-dropdown-language">
-              <button class="oswidget-dropdown-language-button">
-                <div class="oswidget-dropdown-language-current-selection">
-                    <span class="oswidget-dropdown-language-current-selection-name">
-                    <div class="oswidget-dropdown-language-arrow">&#x25BE;</div>
-                </div>
-                <div class="oswidget-dropdown-language-content">
-                  <a>Language 1</a>
-                  <a>Language 2</a>
-                  <a>Language 3</a>
-                </div>
-              </button>
-            </div>
-        */
+         <div class="oswidget-dropdown-language">
+         <button class="oswidget-dropdown-language-button">
+         <div class="oswidget-dropdown-language-current-selection">
+         <span class="oswidget-dropdown-language-current-selection-name">
+         <div class="oswidget-dropdown-language-arrow">&#x25BE;</div>
+         </div>
+         <div class="oswidget-dropdown-language-content">
+         <a>Language 1</a>
+         <a>Language 2</a>
+         <a>Language 3</a>
+         </div>
+         </button>
+         </div>
+         */
         var dropdownElement = document.createElement('div');
         dropdownElement.className = 'oswidget-dropdown-language' + directionStyle;
 
@@ -706,9 +711,9 @@
         // Create "general" dropdown with on-click event listener
         /** Sample in HTML
          <select>
-            <option>Region 1</option>
-            <option>Region 2</option>
-            <option>Region 3</option>
+         <option>Region 1</option>
+         <option>Region 2</option>
+         <option>Region 3</option>
          </select>
          */
 
@@ -746,17 +751,453 @@
         // Create "non-general" dropdown with on-click event listener
         /** Sample in HTML
          <div class="oswidget-dropdown-region">
-            <button class="oswidget-dropdown-region-button">
-                <div class="oswidget-dropdown-region-current-selection">
-                    <span class="oswidget-dropdown-region-current-selection-name">
-                    <div class="oswidget-dropdown-region-arrow">&#x25BE;</div>
-                    </div>
-                    <div class="oswidget-dropdown-region-content">
-                    <a>Region 1</a>
-                    <a>Region 2</a>
-                    <a>Region 3</a>
-                </div>
-            </button>
+         <button class="oswidget-dropdown-region-button">
+         <div class="oswidget-dropdown-region-current-selection">
+         <span class="oswidget-dropdown-region-current-selection-name">
+         <div class="oswidget-dropdown-region-arrow">&#x25BE;</div>
+         </div>
+         <div class="oswidget-dropdown-region-content">
+         <a>Region 1</a>
+         <a>Region 2</a>
+         <a>Region 3</a>
+         </div>
+         </button>
+         </div>
+         */
+        var dropdownElement = document.createElement('div');
+        dropdownElement.className = 'oswidget-dropdown-region' + directionStyle;
+
+        var buttonElement = document.createElement('button');
+        buttonElement.className = 'oswidget-dropdown-region-button' + directionStyle;
+
+        var dropdownCurrentRegionElement = document.createElement('div');
+        dropdownCurrentRegionElement.className = 'oswidget-dropdown-region-current-selection' + directionStyle;
+
+        var dropdownCurrentRegionNameElement = document.createElement('span');
+        dropdownCurrentRegionNameElement.className = 'oswidget-dropdown-region-current-selection-name' + directionStyle;
+        dropdownCurrentRegionNameElement.innerHTML = preferencedLocale.displayName;
+
+        var dropdownArrowElement = document.createElement('div');
+        dropdownArrowElement.className = 'oswidget-dropdown-region-arrow' + directionStyle;
+        dropdownArrowElement.innerHTML = '&#x25BE';
+
+        var dropdownContentElement = document.createElement('div');
+        dropdownContentElement.className = 'oswidget-dropdown-region-content' + directionStyle;
+
+        dropdownElement.appendChild(buttonElement);
+        buttonElement.appendChild(dropdownCurrentRegionElement);
+
+        if (_selector.respectOrder.includes('user-input')) {
+            buttonElement.appendChild(dropdownContentElement);
+            dropdownCurrentRegionElement.appendChild(dropdownCurrentRegionNameElement);
+            dropdownCurrentRegionElement.appendChild(dropdownArrowElement);
+
+            _selector.options.map(function (option) {
+
+                var optionLocale = _selector.locales.find(function (locale) {
+                    return locale.id === option;
+                });
+
+                var optionElement = document.createElement('a');
+                optionElement.innerHTML = optionLocale.displayName;
+                optionElement.value = option;
+                optionElement.addEventListener('click', _onClicked);
+                dropdownContentElement.appendChild(optionElement);
+            });
+        }
+
+        return dropdownElement;
+    };
+
+    OsWidget.addLoader({ type: _type, loader: _loader });
+    OsWidget.addSelectorRender({ type: _type, render: _selectorRender });
+
+    return OsWidget;
+
+})(OsWidget);
+
+/**
+ Interested Regions Module
+ */
+(function (OsWidget) {
+
+    var _type = 'interested-regions';
+    var _selector = OsAppApi.findAppSelectorByExperienceType(OsSelectors, _type);
+    var _expanded = false;
+
+    // called by widget init
+    var _loader = function () {
+        var interestedRegionsSelector = OsAppApi.findAppSelectorByExperienceType(OsSelectors, _type);
+        OsAppApi.loadUserInterestedRegions(onesky.app.apiKey, onesky.app.id, OsWidget.getUser(), interestedRegionsSelector, function (preferencedValues) {
+            OsWidget.render(_type, preferencedValues);
+        });
+    }
+
+    // called by widget render after the caller loader is loaded
+    var _selectorRender = function (preferencedValues) {
+        OsWidget.addStyle(_selector.css);
+        Array.prototype.slice.call(document.getElementsByTagName(_selector.htmlTag)).map(function (htmlTagElement) {
+            var preferencedLocales = _selector.locales.filter(function (locale) {
+                return preferencedValues.includes(locale.id);
+            });
+
+            // no selector options match user preferences
+            if (preferencedLocales.length === 0) {
+                preferencedLocales = _selector.locales.filter(function (locale) {
+                    return locale.id === _selector.defaultValue;
+                });
+            }
+
+            // Clean up the element
+            htmlTagElement.innerHTML = '';
+
+            if (_selector.theme === 'general') {
+                htmlTagElement.appendChild(_generalStyleElement(preferencedLocales));
+            }
+            else {
+                htmlTagElement.appendChild(_nonGeneralStyleElement(preferencedLocales));
+            }
+        });
+    };
+
+    var _onClicked = function (event) {
+
+        var checkboxes = document.getElementById("oswidget-interested-regions");
+        if (!_expanded) {
+            checkboxes.style.display = "block";
+            _expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            _expanded = false;
+            var targetLocales = [];
+            var inputElements = document.getElementsByName('oswidget-interested-regions');
+            for(var i=0; inputElements[i]; ++i){
+                if(inputElements[i].checked){
+                    var targetLocale = _selector.locales.find(function (locale) {
+                        return locale.platformLocale == inputElements[i].id;
+                    });
+                    if (targetLocale) {
+                        targetLocales.push(targetLocale.id);
+                    }
+                }
+            }
+            OsAppApi.saveUserInterestedRegions(onesky.app.apiKey, onesky.app.id, OsWidget.getUser(), targetLocales, function (response) {
+            });
+        }
+
+    };
+
+    var _generalStyleElement = function (preferencedLocales) {
+        // Create "general" dropdown with on-click event listener
+        /** Sample in HTML
+         <form>
+         <div class="oswidget-interested-regions-multi-select-checkbox">
+         <div class="oswidget-interested-regions-select-option"">
+         <select>
+         <option>Select an option</option>
+         </select>
+         <div class="oswidget-interested-regions-select-bg"></div>
+         </div>
+         <div id="oswidget-interested-regions">
+         <label for="US">
+         <input type="checkbox" id="US" name="oswidget-interested-regions"/>US
+         </label>
+         <label for="HK">
+         <input type="checkbox" id="HK" name="oswidget-interested-regions" />HK
+         </label>
+         <label for="TH">
+         <input type="checkbox" id="TH" name="oswidget-interested-regions" />TH
+         </label>
+         </div>
+         </div>
+         </form>
+         */
+
+        var formElement = document.createElement('form');
+        var multiSelectCheckboxDivElement = document.createElement('div');
+        var selectOptionDivElement = document.createElement('div');
+        var interestedRegionsDivElement = document.createElement('div');
+        var selectElement = document.createElement('select');
+        var optionElement = document.createElement('option');
+        var selectBgDivElement = document.createElement('div');
+
+        _selector.options.map(function (option) {
+            var optionLocale = _selector.locales.find(function (locale) {
+                // selector options are in locale id, not platform locale
+                return locale.id === option;
+            });
+
+            var label = document.createElement('label');
+            label.htmlFor = optionLocale.platformLocale;
+
+            var inputElement = document.createElement('input');
+            inputElement.setAttribute('name', 'oswidget-interested-regions');
+            inputElement.setAttribute('type', 'checkbox');
+            inputElement.setAttribute('id', optionLocale.platformLocale);
+            label.appendChild(inputElement);
+            var labelText = document.createTextNode(optionLocale.displayName);
+            label.appendChild(labelText);
+
+            let optionLocaleSelected = preferencedLocales.find(function (preferencedLocale) {
+                return optionLocale.platformLocale == preferencedLocale.platformLocale;
+            });
+            if (optionLocaleSelected) {
+                inputElement.checked = true;
+            }
+            interestedRegionsDivElement.appendChild(label);
+        });
+
+        optionElement.innerHTML = 'Select interested regions';
+        selectElement.appendChild(optionElement);
+        selectBgDivElement.className = 'oswidget-interested-regions-select-bg';
+        selectOptionDivElement.className = 'oswidget-interested-regions-select-option';
+        selectOptionDivElement.appendChild(selectElement);
+        selectOptionDivElement.appendChild(selectBgDivElement);
+        selectOptionDivElement.addEventListener('click', _onClicked);
+
+        multiSelectCheckboxDivElement.className = 'oswidget-interested-regions-multi-select-checkbox';
+        interestedRegionsDivElement.setAttribute('id', 'oswidget-interested-regions');
+
+        multiSelectCheckboxDivElement.appendChild(selectOptionDivElement);
+        multiSelectCheckboxDivElement.appendChild(interestedRegionsDivElement);
+        formElement.appendChild(multiSelectCheckboxDivElement);
+
+        return formElement;
+    };
+
+    var _nonGeneralStyleElement = function (preferencedLocale, directionStyle) {
+        // Create "non-general" dropdown with on-click event listener
+        /** Sample in HTML
+         <div class="oswidget-dropdown-region">
+         <button class="oswidget-dropdown-region-button">
+         <div class="oswidget-dropdown-region-current-selection">
+         <span class="oswidget-dropdown-region-current-selection-name">
+         <div class="oswidget-dropdown-region-arrow">&#x25BE;</div>
+         </div>
+         <div class="oswidget-dropdown-region-content">
+         <a>Region 1</a>
+         <a>Region 2</a>
+         <a>Region 3</a>
+         </div>
+         </button>
+         </div>
+         */
+        var dropdownElement = document.createElement('div');
+        dropdownElement.className = 'oswidget-dropdown-region' + directionStyle;
+
+        var buttonElement = document.createElement('button');
+        buttonElement.className = 'oswidget-dropdown-region-button' + directionStyle;
+
+        var dropdownCurrentRegionElement = document.createElement('div');
+        dropdownCurrentRegionElement.className = 'oswidget-dropdown-region-current-selection' + directionStyle;
+
+        var dropdownCurrentRegionNameElement = document.createElement('span');
+        dropdownCurrentRegionNameElement.className = 'oswidget-dropdown-region-current-selection-name' + directionStyle;
+        dropdownCurrentRegionNameElement.innerHTML = preferencedLocale.displayName;
+
+        var dropdownArrowElement = document.createElement('div');
+        dropdownArrowElement.className = 'oswidget-dropdown-region-arrow' + directionStyle;
+        dropdownArrowElement.innerHTML = '&#x25BE';
+
+        var dropdownContentElement = document.createElement('div');
+        dropdownContentElement.className = 'oswidget-dropdown-region-content' + directionStyle;
+
+        dropdownElement.appendChild(buttonElement);
+        buttonElement.appendChild(dropdownCurrentRegionElement);
+
+        if (_selector.respectOrder.includes('user-input')) {
+            buttonElement.appendChild(dropdownContentElement);
+            dropdownCurrentRegionElement.appendChild(dropdownCurrentRegionNameElement);
+            dropdownCurrentRegionElement.appendChild(dropdownArrowElement);
+
+            _selector.options.map(function (option) {
+
+                var optionLocale = _selector.locales.find(function (locale) {
+                    return locale.id === option;
+                });
+
+                var optionElement = document.createElement('a');
+                optionElement.innerHTML = optionLocale.displayName;
+                optionElement.value = option;
+                optionElement.addEventListener('click', _onClicked);
+                dropdownContentElement.appendChild(optionElement);
+            });
+        }
+
+        return dropdownElement;
+    };
+
+    OsWidget.addLoader({ type: _type, loader: _loader });
+    OsWidget.addSelectorRender({ type: _type, render: _selectorRender });
+
+    return OsWidget;
+
+})(OsWidget);
+
+/**
+ Understood Languages Module
+ */
+(function (OsWidget) {
+
+    var _type = 'understood-languages';
+    var _selector = OsAppApi.findAppSelectorByExperienceType(OsSelectors, _type);
+    var _expanded = false;
+
+    // called by widget init
+    var _loader = function () {
+        var understoodLanguagesSelector = OsAppApi.findAppSelectorByExperienceType(OsSelectors, _type);
+        OsAppApi.loadUserUnderstoodLanguages(onesky.app.apiKey, onesky.app.id, OsWidget.getUser(), understoodLanguagesSelector, function (preferencedValues) {
+            OsWidget.render(_type, preferencedValues);
+        });
+    }
+
+    // called by widget render after the caller loader is loaded
+    var _selectorRender = function (preferencedValues) {
+        OsWidget.addStyle(_selector.css);
+        Array.prototype.slice.call(document.getElementsByTagName(_selector.htmlTag)).map(function (htmlTagElement) {
+            var preferencedLocales = _selector.locales.filter(function (locale) {
+                return preferencedValues.includes(locale.id);
+            });
+
+            // no selector options match user preferences
+            if (preferencedLocales.length === 0) {
+                preferencedLocales = _selector.locales.filter(function (locale) {
+                    return locale.id === _selector.defaultValue;
+                });
+            }
+
+            // Clean up the element
+            htmlTagElement.innerHTML = '';
+
+            if (_selector.theme === 'general') {
+                htmlTagElement.appendChild(_generalStyleElement(preferencedLocales));
+            }
+            else {
+                htmlTagElement.appendChild(_nonGeneralStyleElement(preferencedLocales));
+            }
+        });
+    };
+
+    var _onClicked = function (event) {
+
+        var checkboxes = document.getElementById("oswidget-understood-languages");
+        if (!_expanded) {
+            checkboxes.style.display = "block";
+            _expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            _expanded = false;
+            var targetLocales = [];
+            var inputElements = document.getElementsByName('oswidget-understood-languages');
+            for(var i=0; inputElements[i]; ++i){
+                if(inputElements[i].checked){
+                    var targetLocale = _selector.locales.find(function (locale) {
+                        return locale.platformLocale == inputElements[i].id;
+                    });
+                    if (targetLocale) {
+                        targetLocales.push(targetLocale.id);
+                    }
+                }
+            }
+            OsAppApi.saveUserUnderstoodLanguages(onesky.app.apiKey, onesky.app.id, OsWidget.getUser(), targetLocales, function (response) {
+            });
+        }
+
+    };
+
+    var _generalStyleElement = function (preferencedLocales) {
+        // Create "general" dropdown with on-click event listener
+        /** Sample in HTML
+         <form>
+         <div class="oswidget-understood-languages-multi-select-checkbox">
+         <div class="oswidget-understood-languages-select-option">
+         <select>
+         <option>Select an option</option>
+         </select>
+         <div class="oswidget-understood-languages-select-bg"></div>
+         </div>
+         <div id="oswidget-understood-languages">
+         <label for="en-US">
+         <input type="checkbox" id="en-US" name="oswidget-understood-languages"/>English (United States)
+         </label>
+         <label for="zh-Hant-HK">
+         <input type="checkbox" id="zh-Hant-HK" name="oswidget-understood-languages" />Chinese, Traditional (Hong Kong)
+         </label>
+         <label for="th-TH">
+         <input type="checkbox" id="th-TH" name="oswidget-understood-languages" />Thai (Thailand)
+         </label>
+         </div>
+         </div>
+         </form>
+         */
+
+        var formElement = document.createElement('form');
+        var multiSelectCheckboxDivElement = document.createElement('div');
+        var selectOptionDivElement = document.createElement('div');
+        var understoodLanguagesDivElement = document.createElement('div');
+        var selectElement = document.createElement('select');
+        var optionElement = document.createElement('option');
+        var selectBgDivElement = document.createElement('div');
+
+        _selector.options.map(function (option) {
+            var optionLocale = _selector.locales.find(function (locale) {
+                // selector options are in locale id, not platform locale
+                return locale.id === option;
+            });
+
+            var label = document.createElement('label');
+            label.htmlFor = optionLocale.platformLocale;
+
+            var inputElement = document.createElement('input');
+            inputElement.setAttribute('name', 'oswidget-understood-languages');
+            inputElement.setAttribute('type', 'checkbox');
+            inputElement.setAttribute('id', optionLocale.platformLocale);
+            label.appendChild(inputElement);
+            var labelText = document.createTextNode(optionLocale.displayName);
+            label.appendChild(labelText);
+
+            let optionLocaleSelected = preferencedLocales.find(function (preferencedLocale) {
+                return optionLocale.platformLocale == preferencedLocale.platformLocale;
+            });
+            if (optionLocaleSelected) {
+                inputElement.checked = true;
+            }
+            understoodLanguagesDivElement.appendChild(label);
+        });
+
+        optionElement.innerHTML = 'Select understood languages';
+        selectElement.appendChild(optionElement);
+        selectBgDivElement.className = 'oswidget-understood-languages-select-bg';
+        selectOptionDivElement.className = 'oswidget-understood-languages-select-option';
+        selectOptionDivElement.appendChild(selectElement);
+        selectOptionDivElement.appendChild(selectBgDivElement);
+        selectOptionDivElement.addEventListener('click', _onClicked);
+
+        multiSelectCheckboxDivElement.className = 'oswidget-understood-languages-multi-select-checkbox';
+        understoodLanguagesDivElement.setAttribute('id', 'oswidget-understood-languages');
+
+        multiSelectCheckboxDivElement.appendChild(selectOptionDivElement);
+        multiSelectCheckboxDivElement.appendChild(understoodLanguagesDivElement);
+        formElement.appendChild(multiSelectCheckboxDivElement);
+
+        return formElement;
+    };
+
+    var _nonGeneralStyleElement = function (preferencedLocale, directionStyle) {
+        // Create "non-general" dropdown with on-click event listener
+        /** Sample in HTML
+         <div class="oswidget-dropdown-region">
+         <button class="oswidget-dropdown-region-button">
+         <div class="oswidget-dropdown-region-current-selection">
+         <span class="oswidget-dropdown-region-current-selection-name">
+         <div class="oswidget-dropdown-region-arrow">&#x25BE;</div>
+         </div>
+         <div class="oswidget-dropdown-region-content">
+         <a>Region 1</a>
+         <a>Region 2</a>
+         <a>Region 3</a>
+         </div>
+         </button>
          </div>
          */
         var dropdownElement = document.createElement('div');
