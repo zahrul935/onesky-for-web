@@ -325,14 +325,35 @@ var OsAppApi = (function () {
     var _experienceType = 'interested-regions';
 
     OsAppApi.loadUserInterestedRegions = function(apiKey, appId, user, appSelector, callback){
-        //OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
-        //return callback(preferences);
-        //});
-        return ['US', 'JP']
+        OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
+            return callback(preferences);
+        });
     };
 
     OsAppApi.saveUserInterestedRegions = function(apiKey, appId, user, value, callback){
-        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, [value], callback);
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, value, callback);
+    };
+
+    return OsAppApi;
+
+})(OsAppApi);
+
+
+/**
+ Understood Languages Preference Module
+ */
+(function (OsAppApi) {
+
+    var _experienceType = 'interested-regions';
+
+    OsAppApi.loadUserUnderstoodLanguages = function(apiKey, appId, user, appSelector, callback){
+        OsAppApi.readPreferenceValues(apiKey, appId, user, _experienceType, appSelector.respectOrder, appSelector.defaultValue, function(preferences){
+            return callback(preferences);
+        });
+    };
+
+    OsAppApi.saveUserUnderstoodLanguages = function(apiKey, appId, user, value, callback){
+        return OsAppApi.writePreferenceValues(apiKey, appId, user, _experienceType, value, callback);
     };
 
     return OsAppApi;
