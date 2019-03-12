@@ -11,7 +11,7 @@
         selectorRenders: new Array(),   // {type: _type, render: _render}
 
         init: function () {
-            document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('load', function () {
                 OsWidget.initWithUrl('display-language');
                 OsWidget.initWithUrl('display-region');
                 OsWidget.initWithUrl('interested-regions');
