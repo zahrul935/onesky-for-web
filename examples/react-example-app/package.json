@@ -14,11 +14,13 @@
     "start": "onesky-conductor --app-id $ONESKY_APP_ID --api-key $ONESKY_API_KEY --string-file-path public/locales ; react-scripts start",
     "build": "onesky-conductor --app-id $ONESKY_APP_ID --api-key $ONESKY_API_KEY --string-file-path public/locales ; react-scripts build",
     "test": "onesky-conductor --app-id $ONESKY_APP_ID --api-key $ONESKY_API_KEY --string-file-path public/locales ; react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "e2e": "./node_modules/.bin/cypress open"
   },
   "devDependencies": {
     "@types/react": "^16.3.14",
-    "@types/react-dom": "^16.0.5"
+    "@types/react-dom": "^16.0.5",
+    "cypress": "^4.12.1"
   },
   "browserslist": [
     ">0.2%",
