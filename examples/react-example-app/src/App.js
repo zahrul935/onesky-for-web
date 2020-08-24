@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import intl from 'react-intl-universal';
-import HtmlComponent from "./Html";
 import http from "axios";
+import Home from './Home';
+import China from './Regions/China';
+import Japan from './Regions/Japan';
+import { 
+  BrowserRouter as Router, 
+  Route, 
+  Link, 
+  Switch 
+} from 'react-router-dom'; 
 
 class App extends Component {
   state = {
@@ -26,10 +34,17 @@ class App extends Component {
     var url = new URL(window.location.href);
     var region = url.searchParams.get("region");
     return (
-      this.state.initDone &&
-      <div>
-        <HtmlComponent region={ region } />
-      </div>
+      this.state.initDone && (
+        <Router> 
+           <div className="App">               
+              <Switch> 
+              <Route exact path='/' component={Home}></Route> 
+              <Route exact path='/region/cn' component={China}></Route> 
+              <Route exact path='/region/jp' component={Japan}></Route> 
+            </Switch>
+          </div> 
+        </Router>
+      )
     );
   }
 
@@ -43,7 +58,7 @@ class App extends Component {
       cookieLocaleKey: cookieLocaleKey
     });
 
-    http.get(`locales/${currentLocale}.json`)
+    http.get(`locales/${currentLocale}.json`, { baseURL: '/'})
       .then(res => {
         console.log("App locale data", res.data);
         // init method will load CLDR locale data according to currentLocale
