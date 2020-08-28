@@ -7,7 +7,7 @@ describe('the home page', () => {
         cy.contains('简单句子')
         cy.contains('Message Not in Component Example: react-intl-universal 能够使消息不在 React.Component 中国际化')
     })
-    it('select different lenguage', () => {
+    it('select different language', () => {
         cy.get('body > language-selector > select').select('English (US)')
         cy.contains('Simple Sentence')
         cy.contains('This is <script>alert("ReactIntlUniversal prevents from xss attack")</script>')
