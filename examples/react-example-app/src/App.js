@@ -6,7 +6,7 @@ import Home from './Home';
 import China from './Regions/China';
 import Japan from './Regions/Japan';
 import { 
-  BrowserRouter as Router, 
+  HashRouter as Router, 
   Route, 
   Link, 
   Switch 
