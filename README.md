@@ -1,16 +1,16 @@
 <img src="https://github.com/onesky/onesky-for-web/blob/screenshots/screenshots/onesky-saas.png?raw=true" height="65" />
 
-**OneSky for Web** helps developers actualize cross-platform localization experience quickly with out-of-box solutions. Save hundreds of hours in finding and trying out best practices. You can mix-and-match building blocks with your own implementations if needed.
-
-## Developer Hub
-The [Developer Hub](https://developers.onesky.app) contains all the information developers need to build all kinds of integration with the OneSky.
+**OneSky SDK for Web** offers a client library for developers to actualize localization effects with out-of-box solutions. The library's primary function is managing language/region preferences for the end user, so that the appropriate localization effects can be displayed. It comes with a UI kit for managing these settings.
 
 ## Setup and Configuration
 Our [installation guide](https://developers.onesky.app/docs/web-installation) contains full setup and initialisation instructions.
 
 ## Sample Apps
-Projects with some basic example integrations are provided
+Example projects showing basic integration with the client library
 - [Single page apps](https://github.com/onesky/onesky-for-web/tree/master/examples)
+
+## Developer Hub
+The [Developer Hub](https://developers.onesky.app) contains all information needed to integrate your apps with OneSky.
 
 ## Customer Support
 If you bump into any problems or need more support, just create an issue [here](https://github.com/onesky/onesky-for-ios/issues) and it will be routed to our Customer Support Engineers.
