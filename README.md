@@ -6,7 +6,7 @@
 Our [installation guide](https://developers.onesky.app/docs/web-installation) contains full setup and initialization instructions.
 
 ## Sample Apps
-Example projects showing basic integration with the client library
+Example projects showing basic integration with the client library:
 - [Single page apps](https://github.com/onesky/onesky-for-web/tree/master/examples)
 
 ## Developer Hub
