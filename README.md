@@ -3,7 +3,7 @@
 **OneSky SDK for Web** offers a client library for developers to actualize localization effects with out-of-the-box solutions. The primary function of the library is managing language and region preferences for the end user, so that the appropriate localization effects can be displayed. The library also includes a UI kit, and communicates with the [OneSky App API](https://developers.onesky.app/reference).
 
 ## Setup and Configuration
-Our [installation guide](https://developers.onesky.app/docs/web-installation) contains full setup and initialisation instructions.
+Our [installation guide](https://developers.onesky.app/docs/web-installation) contains full setup and initialization instructions.
 
 ## Sample Apps
 Example projects showing basic integration with the client library
